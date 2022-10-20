@@ -1,0 +1,43 @@
+.Body {
+    position: fixed;
+    top: 4rem;
+    left: 17rem;
+    width: calc(100vw - 17rem);
+    height: 100px;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.SideBar-minimize {
+    animation: sidebar-minimize 0.3s ease-in-out forwards;
+    transition: all 1s;
+}
+
+@keyframes sidebar-minimize {
+    from {
+        width: calc(100vw - 17rem);
+        left: 17rem;
+    }
+
+    to {
+        width: 100vw;
+        left: 0rem;
+    }
+}
+
+.SideBar-maximize {
+    animation: sidebar-maximize 0.3s ease-in-out forwards;
+    transition: all 1s;
+}
+
+@keyframes sidebar-maximize {
+    from {
+        width: 100vw;
+        left: 0rem;
+    }
+    
+    to {
+        width: calc(100vw - 17rem);
+        left: 17rem;
+    }
+}

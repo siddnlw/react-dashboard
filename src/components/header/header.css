@@ -1,0 +1,68 @@
+.Header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 4rem;
+    padding: 0.8rem;
+    padding-left: 18rem;
+    box-sizing: border-box;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: padding-left 0.4s;
+}
+
+.Header >*{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-button{
+    background: none;
+    border: none;
+    transform: rotateZ(90deg);
+    font-size: 2rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.sidebar-button:hover{
+    color: #bf74ff;
+}
+.sidebar-toggle-open{
+    animation: sidebar-toggle-open 0.3s ease-in-out forwards;
+}
+
+@keyframes sidebar-toggle-open{
+    from{
+        margin-left: -17rem;
+    }
+    to{
+        margin-left: 0rem;
+    }
+}
+
+.sidebar-toggle-close{
+    animation: sidebar-toggle-close 0.3s ease-in-out forwards;
+}
+
+@keyframes sidebar-toggle-close{
+    from{
+        margin-left: 0rem;
+    }
+    to{
+        margin-left: -17rem;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .Header{
+        padding-left: 0.8rem;
+    }
+}
