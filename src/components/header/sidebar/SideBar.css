@@ -1,74 +1,83 @@
-.SideBar {
-    position: fixed;
-    left: 0;
-    top: 0rem;
-    height: 100vh;
-    width: 17rem;
-    margin-left: -17rem;
-    background: white;
-    z-index: 101;
-    box-sizing: border-box;
-}
+  .sidebar-link {
+      text-decoration: none;
+      color: black;
+  }
 
-.logo {
-    height: 50px;
-    width: 100px;
-    padding-right: 4rem;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    object-fit: cover;
-    object-position: 50% 50%;
-}
+  .SideBar {
+      position: fixed;
+      left: 0;
+      top: 0rem;
+      height: 100vh;
+      width: 17rem;
+      margin-left: -17rem;
+      background: white;
+      z-index: 101;
+      box-sizing: border-box;
+  }
 
-.sidebar-menu-container{
-    margin-top: 1rem;
-    width: 100%;
-    height: calc(100vh - 100px);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
+  .logo {
+      height: 50px;
+      width: 100px;
+      padding-right: 4rem;
+      padding-left: 1rem;
+      padding-top: 0.5rem;
+      object-fit: cover;
+      object-position: 50% 50%;
+  }
 
-ul{
-    width: 100%;
-    padding: 0;
-    padding-left: 1rem;
-    box-sizing: border-box;
+  .sidebar-menu-container {
+      margin-top: 1rem;
+      width: 100%;
+      height: calc(100vh - 100px);
+      overflow-y: scroll;
+      overflow-x: hidden;
+      box-sizing: border-box;
+  }
 
-}
+  ul {
+      width: 100%;
+      padding: 0;
+      padding-left: 1rem;
+      box-sizing: border-box;
 
-li{
-    list-style-type: none;
-    width: calc(100% - 1rem);
-    padding: 0.7rem 0.7rem 0.7rem 0.2rem;
-    margin-bottom: 0.7rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: color 0.5s, background 0.3s;
-}
+  }
 
-.list-group-title{
-    gap: 10px;
-    letter-spacing: 3px;
-    color: grey;
-    text-transform:uppercase;
-    font-size: 0.7rem;
-}
-.list-group-item{
-    border-radius: 0.3rem;
-    padding-left: 0.5rem;
-    text-transform:capitalize;
-}
-.list-group-item i{
-    padding-right: 1rem;
-}
-.list-group-item.active{
-    background: linear-gradient(to right, #e1c4ff, #cc96fc);
-}
+  li {
+      list-style-type: none;
+      width: calc(100% - 1rem);
+      padding: 0.7rem 0.7rem 0.7rem 0.2rem;
+      margin-bottom: 0.7rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: color 0.5s, background 0.3s;
+  }
 
-.list-group-item:not(.active):hover{
-    color: #bf74ff;
-    background: linear-gradient(to left, #efdfff, #f2e7ff);
+  .list-group-title {
+      gap: 10px;
+      letter-spacing: 3px;
+      color: grey;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+  }
 
-}
-@media screen and (max-width:1000px) {}
+  .list-group-item {
+      border-radius: 0.3rem;
+      padding-left: 0.5rem;
+      text-transform: capitalize;
+  }
+
+  .list-group-item i {
+      padding-right: 1rem;
+  }
+
+  .list-group-item.active {
+      background: linear-gradient(to right, #e1c4ff, #cc96fc);
+  }
+
+  .list-group-item:not(.active):hover {
+      color: #bf74ff;
+      background: linear-gradient(to left, #efdfff, #f2e7ff);
+
+  }
+
+  @media screen and (max-width:1000px) {}

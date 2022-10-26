@@ -3,9 +3,12 @@
     top: 4rem;
     left: 17rem;
     width: calc(100vw - 17rem);
-    height: 100px;
+    /* height: 20vh; */
     display: grid;
     row-gap: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    /* overflow-y: scroll; */
 }
 
 .SideBar-minimize {

@@ -1,0 +1,13 @@
+.Error404{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    flex-direction: column;
+}
+
+.Error404 h5{
+ font-size: 1rem;
+}
