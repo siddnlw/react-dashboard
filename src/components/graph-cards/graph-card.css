@@ -6,6 +6,7 @@
     column-gap: 4rem;
     row-gap: 3rem;
     justify-items: center;
+    margin-bottom: 0.5rem;
 }
 
 .graph-card {
@@ -13,14 +14,10 @@
     height: 10rem;
     line-break: strict;
     background: white;
-    padding: 1rem;
-    border-radius: 20px;
-    box-sizing: border-box;
     position: relative;
     z-index: 1;
-    transition: margin-bottom 0.3s 0.3s;
+    transition: margin-bottom 0.5s 0.3s;
     cursor: pointer;
-
 }
 
 .graph-card-title{
@@ -124,14 +121,43 @@
     transition: top 0.3s, left 0.3s;
 }
 
+.graph-card-value-postfix{
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
 .graph-card-graph{
     position: absolute;
     bottom: -2rem;
-    left: 0rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.1s, visibility 0.3s;
     z-index: 100;
+}
+
+.graph-card-graph.pie-graph{
+    bottom: 2.5rem;
+    /* left:3rem; */
+    right: 0;
+    width: 100%;
+    height: 4.3rem;
+    display: flex;
+    justify-content: center;
+}
+.graph-card-graph.double-graph{
+    top: 1rem;
+    left: -1rem;
+    width: 100%;
+
+}
+
+#apexchartsuj5ykmrr, #SvgjsSvg2828{
+    width: 100% !important;
+
 }
 
 
@@ -156,11 +182,11 @@
 
 }
 
-.graph-card:hover{
+.graph-card:hover, .graph-card-active{
     margin-bottom: 3rem;
     transition: margin-bottom 0.3s;
 }
-.graph-card:hover>.graph-card-title{
+.graph-card:hover>.graph-card-title, .graph-card-title-active{
     color: black;
     transition: color 0.3s;
 }
@@ -194,4 +220,27 @@
     display: block;
     visibility: visible;
     transition: opacity 1s 0.3s, visibility 0.3s;
+}
+
+
+
+/* GraphCard2 CSS */
+.GraphCard2{
+    margin-top: 2rem;
+    min-height: 10rem;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    line-break: strict;
+    column-gap: 4rem;
+    row-gap: 3rem;
+    
+}
+.FullGraphCard{
+    background: white;
+    grid-column: 1 / span 2;
+}
+
+.FullGraphCard2{
+    grid-column: 3;
+    background: white;
 }

@@ -5,7 +5,7 @@
 
   .SideBar {
       position: fixed;
-      left: 0;
+      left: 0rem;
       top: 0rem;
       height: 100vh;
       width: 17rem;
@@ -13,6 +13,20 @@
       background: white;
       z-index: 101;
       box-sizing: border-box;
+  }
+
+  .sidebar-sidearea {
+      position: absolute;
+      top: 4rem;
+      left: 17rem;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(0, 0, 0, 0.2);
+      transition: background 0.3s;
+  }
+
+  .sidebar-sidearea.display-toggle {
+      display: none;
   }
 
   .logo {
@@ -32,6 +46,25 @@
       overflow-y: scroll;
       overflow-x: hidden;
       box-sizing: border-box;
+  }
+
+  .sidebar-button {
+      position: absolute;
+      top: 1rem;
+      left: 19rem;
+      background: none;
+      border: none;
+      transform: rotateZ(90deg);
+      font-size: 2rem;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: color 0.3s, text-shadow 0.3s;
+      /* z-index: 102; */
+
+  }
+
+  .sidebar-button:hover {
+      color: #bf74ff;
   }
 
   ul {

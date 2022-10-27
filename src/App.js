@@ -1,17 +1,19 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './assets/css/style.css';
 import Header from './components/header/Header.js';
 import Body from './components/body/Body.js';
-import Footer from './components/footer/Footer.js';
+import Error404 from './components/404/Error404.js';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
-        <Body />
-        <Footer />
+        {/* <Routes> */}
+          <Header />
+          <Body />
+          {/* <Route path="*" element={<Error404 />} /> */}
+        {/* </Routes> */}
       </BrowserRouter>
     </div>
   );
