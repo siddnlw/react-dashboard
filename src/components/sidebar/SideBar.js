@@ -2,8 +2,6 @@ import './SideBar.css'
 import Logo from '../../assets/images/logo.png';
 import { Outlet, Link } from "react-router-dom";
 
-
-
 function SideBar() {
 
   window.onload = () => {

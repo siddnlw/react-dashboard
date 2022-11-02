@@ -5,8 +5,8 @@
     width: calc(100vw - 17rem);
     max-width: 100vw;
     min-height: calc(100vh - 4rem);
-    display: grid;
-    row-gap: 1rem;
+    /* display: grid; */
+    /* row-gap: 1rem; */
     padding: 2rem;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -45,4 +45,13 @@
         width: calc(100vw - 17rem);
         left: 17rem;
     }
+}
+
+.content{
+    position: sticky;
+    top: 7rem;
+    width: 100%;
+    padding: 0rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    transition: top 0.3s;
 }

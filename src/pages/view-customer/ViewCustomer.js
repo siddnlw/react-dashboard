@@ -1,9 +1,10 @@
 import DocumentTitle from 'react-document-title';
+import './view-customer.css';
 
 function ViewCustomer() {
     return (
         <DocumentTitle title='View Customer'>
-            <div>hi</div>
+            <div className='ViewCustomer'>hi</div>
         </DocumentTitle>
     );
 }

@@ -9,11 +9,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Routes> */}
           <Header />
           <Body />
-          {/* <Route path="*" element={<Error404 />} /> */}
-        {/* </Routes> */}
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,76 @@
+.Breadcrums {
+    position: sticky;
+    top: 0rem;
+    left: 1rem;
+    width: 100%;
+    min-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0rem 1rem 0rem 1rem;
+    box-sizing: border-box;
+}
+
+.Breadcrums>* {
+    margin-bottom: 1rem;
+}
+
+.breadcrums-path {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.breadcrums-path>* {
+    margin-right: 10px;
+}
+
+.child-path::before {
+    content: '/';
+    margin-right: 10px;
+
+}
+
+.path:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+.child-path:hover:before {
+    color: black;
+
+}
+
+.breadcrums-logo i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e1c4ff, #cc96fc);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+}
+
+
+.current-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    background: white;
+}
+
+.current-time:hover {
+    cursor: pointer;
+    color: purple;
+}
+
+@media screen and (max-width:1200px) {
+    .Breadcrums {
+        justify-content: space-evenly;
+        left: 0rem;
+    }
+}

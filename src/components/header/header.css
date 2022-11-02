@@ -59,6 +59,58 @@
     }
 }
 
+.user-name{
+    text-transform: capitalize;
+    position:relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+}
+
+.user-name:hover > .user-options{
+    height: 11rem;
+    transition: height 0.3s;
+}
+.user-name:hover > .user-options ul li{
+    color: black;
+    transition: color 0.5s 0.1s ;
+}
+.user-options{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    min-width: 12rem;
+    right: 0;
+    background: white;
+    transition: height 0.3s 0.2s;
+}
+.user-options ul{
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box ;
+}
+.user-options ul li{
+    color: white;
+    padding: 0.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0.3rem;
+    transition: color 0.3s ;
+}
+.user-options ul li:hover{
+    background: linear-gradient(to left, #efdfff, #f2e7ff);
+    color: #bf74ff !important;
+    transition: color 0.1s ;
+}
+.user-options ul li >*{
+    margin-right: 0.5rem;
+}
+
 
 
 @media screen and (max-width:600px) {

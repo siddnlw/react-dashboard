@@ -14,16 +14,19 @@ body{
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 5px;
+    display: none;
   }
-
+  
   *::-webkit-scrollbar-track {
     background: #ffffff;
+    display: none;
   }
-
+  
   *::-webkit-scrollbar-thumb {
     background-color: rgba(163, 163, 163, 0.5);
     border-radius: 10px;
     border: 3px solid transparent;
+    display: none;
   }
 
   .box-component{

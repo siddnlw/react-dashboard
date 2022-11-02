@@ -7,6 +7,7 @@
     row-gap: 3rem;
     justify-items: center;
     margin-bottom: 0.5rem;
+    background: red;
 }
 
 .graph-card {
@@ -16,22 +17,24 @@
     background: white;
     position: relative;
     z-index: 1;
-    transition: margin-bottom 0.5s 0.3s;
+    transition: margin-bottom 0.5s 1s;
     cursor: pointer;
+    /* grid-column-start: 1; */
+    /* grid-column: 4; */
 }
 
-.graph-card-title{
+.graph-card-title {
     position: sticky;
     top: 1rem;
     left: 1rem;
     z-index: 11;
     color: white;
-    transition: color 0.3s;
+    transition: color 0.3s 0.3s;
     text-transform: capitalize;
     font-size: 1.4rem;
 }
 
-.graph-card-title i{
+.graph-card-title i {
     margin-right: 1rem;
 }
 
@@ -59,7 +62,7 @@
     background: linear-gradient(90deg, #a8e063, #56ab2f);
 }
 
-.on-click-title{
+.on-click-title {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +76,7 @@
 .graph-card-content {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     margin-top: 0px;
     height: 100%;
     width: 100%;
@@ -81,7 +84,94 @@
     border-radius: 20px;
     box-sizing: border-box;
     z-index: 10;
-    transition: margin-top 0.3s, box-shadow 0.3s;
+    transition: margin-top 0.3s 0.3s, width 0.3s 0.1s, height 0.1s 0.2s, box-shadow 0.3s, left 0.3s 0.1s;
+}
+
+.closeGraphCard {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.closeGraphCard:hover {
+    color: red;
+    transition: color 0.3s;
+}
+
+/* .graph-card-content-active{ */
+/* } */
+
+.graph-card:first-child .graph-card-content.graph-card-content-active {
+    left: 0% !important;
+}
+.graph-card:nth-child(2) .graph-card-content.graph-card-content-active {
+    left: -126.1% !important;
+}
+
+.graph-card:nth-child(3) .graph-card-content.graph-card-content-active {
+    left: -252.4% !important;
+}
+
+.graph-card:nth-child(4) .graph-card-content.graph-card-content-active {
+    left: -378.7% !important;
+}
+
+.graph-card-content.graph-card-content-active {
+    position: -ms-page;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-self: unset;
+    grid-column: 1 / 3;
+    margin-top: 12rem;
+    /* width: 480%; */
+    width: calc(93.75vw);
+    height: 15rem;
+    justify-self: center;
+    box-shadow: 0px -10px 20px 5px rgb(128, 128, 128, 0.2);
+    transition: margin-top 0.5s 0s, width 0.5s 0.3s, height 0.5s 0.3s, box-shadow 0.3s, left 0.3s 0.3s;
+    cursor: auto;
+}
+
+.graph-card.graph-card-active {
+    /* 
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4; 
+    */
+    margin-bottom: 17rem;
+    transition: margin-bottom 0.3s;
+}
+
+.graph-card:active>.graph-card-content {
+    animation: gelatine 5s forwards infinite;
+}
+
+@keyframes gelatine {
+
+    from,
+    to {
+        transform: scale(1, 1);
+        border-radius: 20px;
+    }
+
+    50% {
+        transform: scale(2, 2.1), rotateX(90);
+    }
+
+    /* 30% { transform: scale(1.5, 0.5); } */
+    /* 45% { transform: scale(0.95, 1.05); } */
+    /* 60% { transform: scale(0.7, 1.1); } */
+    /* 75% { transform: scale(1.1, 0.7); } */
+    /* 90% { transform: scale(0.95, 1.05);} */
 }
 
 .circle1 {
@@ -109,7 +199,7 @@
 
 }
 
-.graph-card-value{
+.graph-card-value {
     position: absolute;
     top: 4rem;
     left: 3rem;
@@ -117,20 +207,19 @@
     color: white;
     font-size: 2rem;
     font-weight: bolder;
-    /* transition: color 0.3s; */
     transition: top 0.3s, left 0.3s;
 }
 
-.graph-card-value-postfix{
+.graph-card-value-postfix {
     font-size: 0.7rem;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.graph-card-graph{
+.graph-card-graph {
     position: absolute;
     bottom: -2rem;
-    right: 1rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     opacity: 0;
@@ -139,63 +228,63 @@
     z-index: 100;
 }
 
-.graph-card-graph.pie-graph{
+.graph-card-graph.pie-graph {
     bottom: 2.5rem;
-    /* left:3rem; */
-    right: 0;
     width: 100%;
     height: 4.3rem;
-    display: flex;
-    justify-content: center;
 }
-.graph-card-graph.double-graph{
-    top: 1rem;
+
+.graph-card-graph.double-graph {
+    top: 2.5rem;
     left: -1rem;
     width: 100%;
-
 }
-
-#apexchartsuj5ykmrr, #SvgjsSvg2828{
-    width: 100% !important;
-
-}
-
 
 /* to hide x-axis, y-axis and toolip of graph */
-.apexcharts-toolbar, .apexcharts-yaxis, .apexcharts-xaxis, .apexcharts-gridlines-horizontal, .apexcharts-xaxis-tick{
+.graph-card-graph .apexcharts-toolbar,
+.graph-card-graph .apexcharts-yaxis,
+.graph-card-graph .apexcharts-xaxis,
+.graph-card-graph .apexcharts-gridlines-horizontal,
+.graph-card-graph .apexcharts-xaxis-tick {
     display: none !important;
 }
 
 
-.graph-card-value-subvalue{
+.graph-card-value-subvalue {
     position: absolute;
     bottom: 1rem;
     left: 2rem;
 }
-.graph-card-value-subvalue.increment{
+
+.graph-card-value-subvalue.increment {
     color: #5ccf1f;
     font-weight: bolder;
 }
-.graph-card-value-subvalue.decrement{
+
+.graph-card-value-subvalue.decrement {
     color: #FF3D1D;
     font-weight: bolder;
 
 }
 
-.graph-card:hover, .graph-card-active{
+.graph-card:not(.graph-card-active):hover {
     margin-bottom: 3rem;
     transition: margin-bottom 0.3s;
 }
-.graph-card:hover>.graph-card-title, .graph-card-title-active{
+
+.graph-card:not(.graph-card-active):hover>.graph-card-title,
+.graph-card-title-active {
     color: black;
     transition: color 0.3s;
 }
-.graph-card:hover>.graph-card-content{
+
+.graph-card:not(.graph-card-active):hover>.graph-card-content {
     margin-top: 3.1rem;
     box-shadow: 0px -10px 20px 5px rgb(128, 128, 128, 0.2);
     transition: margin-top 0.3s, box-shadow 0.5s;
 }
-.graph-card:hover>.graph-card-content>.circle1 {
+
+.graph-card:not(.graph-card-active):hover>.graph-card-content>.circle1 {
     top: -1rem;
     right: -5rem;
     height: 10rem;
@@ -203,44 +292,83 @@
     transition: width 0.3s, height 0.3s, top 0.3s, right 0.3s;
 }
 
-.graph-card:hover>.graph-card-content>.circle2 {
+.graph-card:not(.graph-card-active):hover>.graph-card-content>.circle2 {
     height: 11rem;
     width: 11rem;
     bottom: -4rem;
     right: 1rem;
     transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
 }
-.graph-card:hover>.graph-card-content>.graph-card-value {
+
+.graph-card:not(.graph-card-active):hover>.graph-card-content>.graph-card-value {
     top: 1rem;
     left: 1rem;
-    transition: top  0.3s, left 0.3s;
+    transition: top 0.3s, left 0.3s;
 }
-.graph-card:hover>.graph-card-content>.graph-card-graph {
+
+.graph-card:not(.graph-card-active):hover>.graph-card-content>.graph-card-graph {
     opacity: 1;
     display: block;
     visibility: visible;
     transition: opacity 1s 0.3s, visibility 0.3s;
 }
+@media only screen and (max-width: 1088px) {
+    .graph-card-content.graph-card-content-active {
+        width: 225%;
+        height: 200%;
+    }
+}
 
+@media only screen and (max-width: 832px) {
+    .graph-card-content.graph-card-content-active {
+        width: 100%;
+        height: 200%;
+    }
+}
+
+@media only screen and (max-width: 216px) {
+    .graph-card-content.graph-card-content-active {
+        width: 10px;
+        height: 200%;
+    }
+}
 
 
 /* GraphCard2 CSS */
-.GraphCard2{
+.GraphCard2 {
     margin-top: 2rem;
     min-height: 10rem;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     line-break: strict;
-    column-gap: 4rem;
+    column-gap: 2rem;
     row-gap: 3rem;
-    
-}
-.FullGraphCard{
-    background: white;
-    grid-column: 1 / span 2;
+
 }
 
-.FullGraphCard2{
+.FullGraphCard {
+    background: white;
+    grid-column: 1/span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.FullGraphCard>* {
+    width: 120%;
+}
+
+.SmallTableCard {
     grid-column: 3;
     background: white;
+}
+
+@media screen and (max-width:1000px) {
+
+    .FullGraphCard,
+    .SmallTableCard {
+        grid-column: 1;
+    }
+
 }
