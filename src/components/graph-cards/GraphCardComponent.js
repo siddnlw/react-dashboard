@@ -14,6 +14,7 @@ function toggle_grapgh_card_active(name, closeAll) {
     var graphCardContents = document.querySelectorAll('.graph-card-content');
     var graphCardTitles = document.querySelectorAll('.graph-card-title');
     var addTitleTographCardContents = document.getElementsByClassName('graph-card-content');
+    var element = document.getElementsByClassName('closeGraphCard');
     var classLength = addTitleTographCardContents.length;
     var removeActiveClass = false;
     var skipTime = 0;
@@ -24,8 +25,10 @@ function toggle_grapgh_card_active(name, closeAll) {
       }
     });
     if (removeActiveClass || closeAll) {
+
       for (let i = 0; i < classLength; i++) {
         addTitleTographCardContents[i].title = 'Click to expand';
+        element[i].style.display = "none";
       }
       graphCards.forEach(graphCard => {
         graphCard.classList.remove('graph-card-active');
@@ -41,11 +44,12 @@ function toggle_grapgh_card_active(name, closeAll) {
   }
 
   if (!closeAll) {
-    // alert(closeAll);
     setTimeout(() => {
       var graphCard = document.getElementById('graph-card-' + name);
       var graphCardContent = document.getElementById('graph-card-content-' + name);
       var graphCardTitle = document.getElementById('graph-card-title-' + name);
+      var element = document.getElementById('closeGraphCard' + name);
+      element.style.display = "block";
       graphCard.classList.add('graph-card-active');
       graphCardContent.classList.add('graph-card-content-active');
       graphCardTitle.classList.add('graph-card-title-active');
@@ -73,13 +77,15 @@ function GraphCardComponent(props) {
 
   // });
   return (
-    <div id={'graph-card-' + props.name} className="graph-card box-component " onClick={() => { toggle_grapgh_card_active(props.name, false) }}>
+    <div id={'graph-card-' + props.name} className="graph-card box-component ">
+      <div id={"closeGraphCard" + props.name} className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }}>
+        <div>Click here to close</div>
+      </div>
       <div id={'graph-card-title-' + props.name} className="graph-card-title">
         <i className={'fa fas ' + props.icon}></i>
         {props.name}
       </div>
-      <div title='Click to expand' id={'graph-card-content-' + props.name} className={"graph-card-content  " + (props.bg_color_class)}>
-        <div className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }} title='Close'>x</div>
+      <div title='Click to expand' onClick={() => { toggle_grapgh_card_active(props.name, false) }} id={'graph-card-content-' + props.name} className={"graph-card-content  " + (props.bg_color_class)}>
         <div className="graph-card-value">
           {props.value}
           {props.value_postfix ? (
