@@ -7,7 +7,7 @@ function SideBar() {
   window.onload = () => {
     const sidebar = document.querySelector('.SideBar');
     const body = document.querySelector('.Body');
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 800) {
       sidebar.classList.remove('sidebar-toggle-open');
       sidebar.classList.add('sidebar-toggle-close');
       body.classList.add('SideBar-minimize');
@@ -31,7 +31,7 @@ function SideBar() {
   window.addEventListener('resize', () => {
     const sidebar = document.querySelector('.SideBar');
     const body = document.querySelector('.Body');
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 800) {
       sidebar.classList.remove('sidebar-toggle-open');
       sidebar.classList.add('sidebar-toggle-close');
       body.classList.add('SideBar-minimize');
@@ -49,12 +49,12 @@ function SideBar() {
     const sidebar = document.querySelector('.SideBar');
     sidebar.classList.toggle('sidebar-toggle-open');
     sidebar.classList.toggle('sidebar-toggle-close');
-    if (window.innerWidth >= 600) {
+    if (window.innerWidth >= 800) {
       const body = document.querySelector('.Body');
       body.classList.toggle('SideBar-minimize');
       body.classList.toggle('SideBar-maximize');
     }
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 800) {
       const sidebarSidearea = document.querySelector('.sidebar-sidearea');
       sidebarSidearea.classList.toggle('display-toggle');
     }
