@@ -5,17 +5,17 @@ import TableBody from '@mui/material/TableBody';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
+    { field: 'id', headerName: 'ID', width: '20%' },
     {
         field: 'fullName',
         headerName: 'Full name',
         description: 'This column has a value getter and is not sortable.',
         sortable: true,
-        width: 160,
+        width: '40%',
         valueGetter: (params) =>
             `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
-    { field: 'role', headerName: 'Role', width: 150 },
+    { field: 'role', headerName: 'Role', width: '40%' },
 ];
 
 const rows = [
@@ -32,7 +32,7 @@ const rows = [
 
 function SmallTable() {
     return (
-        <div style={{ height: 400 }}>
+        <div style={{ height: 400, width: '100%' }}>
             <DataGrid
                 rows={rows}
                 columns={columns}

@@ -146,7 +146,13 @@ class FullGraphCard extends Component {
           curve: 'smooth',
         },
         xaxis: {
-          categories: (this.props.graph_catagories)
+          categories: (this.props.graph_catagories),
+          label: {
+            style: {
+              color: "#fff",
+              background: '#775DD0'
+            }
+          }
         },
         colors: (this.props.graph_color)
       },

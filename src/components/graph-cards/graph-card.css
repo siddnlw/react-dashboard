@@ -148,15 +148,9 @@
 }
 
 .graph-card.graph-card-active {
-    /* 
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4; 
-    */
     cursor: auto;
     margin-bottom: 17rem;
-    transition: margin-bottom 0.3s;
+    transition: margin-bottom 0.5s;
 }
 
 .graph-card:active>.graph-card-content {
@@ -277,7 +271,7 @@
 
 .graph-card:not(.graph-card-active):hover {
     margin-bottom: 3rem;
-    transition: margin-bottom 0.3s;
+    transition: margin-bottom 0.3s 0.3s;
 }
 
 .graph-card:not(.graph-card-active):hover>.graph-card-title,
@@ -289,7 +283,8 @@
 .graph-card:not(.graph-card-active):hover>.graph-card-content {
     margin-top: 3.1rem;
     box-shadow: 0px -10px 20px 5px rgb(128, 128, 128, 0.2);
-    transition: margin-top 0.3s, box-shadow 0.5s;
+    transition: margin-top 0.3s 0.3s, width 0.3s, height 0.3s, box-shadow 0.3s, left 0.3s;
+    /* transition: margin-top 0.3s, box-shadow 0.5s; */
 }
 
 .graph-card:not(.graph-card-active):hover>.graph-card-content>.circle1 {
@@ -311,7 +306,7 @@
 .graph-card:not(.graph-card-active):hover>.graph-card-content>.graph-card-value {
     top: 1rem;
     left: 1rem;
-    transition: top 0.3s, left 0.3s;
+    transition: top 0.3s 0.3s, left 0.3s 0.3s;
 }
 
 .graph-card:not(.graph-card-active):hover>.graph-card-content>.graph-card-graph {
@@ -368,6 +363,7 @@
 }
 
 .SmallTableCard {
+    width: 100%;
     grid-column: 3;
     background: white;
 }

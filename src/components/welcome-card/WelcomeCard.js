@@ -1,6 +1,6 @@
 import './welcome-card.css';
 import Cloud from '../../assets/elements/Clouds/Clouds';
-import Tilt from 'react-parallax-tilt';
+// import Tilt from 'react-parallax-tilt';
 
 function WelcomeCard() {
 
@@ -10,9 +10,9 @@ function WelcomeCard() {
     }
 
     return (
-        <Tilt
-            tiltAxis='x' tiltEnable={false} tiltReverse={true} glareEnable={true} glareMaxOpacity={0.7} glareColor="white" glarePosition="bottom"
-        >
+        // <Tilt
+        //     tiltAxis='x' tiltEnable={false} tiltReverse={true} glareEnable={true} glareMaxOpacity={0.7} glareColor="white" glarePosition="bottom"
+        // >
             <div id='WelcomeCard' className="WelcomeCard box-component">
                 <div className="closeWelcomeCardButton" onClick={close_welcome_card}>x</div>
                 <div className="welcome-msg">
@@ -35,7 +35,7 @@ function WelcomeCard() {
                 </div>
                 <div className="welcome-character"></div>
             </div >
-        </Tilt>
+        // </Tilt>
     );
 }
 
