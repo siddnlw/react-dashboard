@@ -66,7 +66,7 @@
 	position: absolute;
 	top: 0;
 	left: -5rem !important;
-	z-index: 0;
+	z-index: 3;
 	-webkit-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
 	-moz-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
 	animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
@@ -98,7 +98,7 @@
 	position: absolute;
 	top: 3rem;
 	left: 7rem !important;
-	z-index: 0;
+	z-index: 1;
 	animation-delay: 1s;
 	-webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
 	-moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
@@ -114,7 +114,7 @@
 	position: absolute;
 	bottom: 8rem;
 	right: -1rem !important;
-	z-index: 0;
+	z-index: 1;
 	-webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
 	-moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
 	animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
@@ -132,7 +132,7 @@
 	-moz-animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
 	animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
 	animation-delay: 3.6s, 0.1s;
-	z-index: 1;
+	z-index: 2;
 	-webkit-transform: scale(0.55);
 	-moz-transform: scale(0.55);
 	transform: scale(0.55);

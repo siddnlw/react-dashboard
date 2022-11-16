@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-.WelcomeCard {
+.WelcomeCardGoku {
     position: relative;
     background: linear-gradient(to bottom, rgb(248, 216, 255), rgb(220, 140, 223));
     width: 100%;
@@ -12,11 +12,11 @@
     transition: filter 1.3s;
 }
 
-.WelcomeCard.disapear {
+.WelcomeCardGoku.disapear {
     animation: disapear 3s forwards ease-out;
 }
 
-.WelcomeCard.disapear>* {
+.WelcomeCardGoku.disapear>* {
     height: 0;
     width: 0;
     margin: 0;
@@ -25,20 +25,20 @@
     transition: width 3s, height 3s, margin 3s, padding 3s, filter 0.3s;
 }
 
-.WelcomeCard>*>*>*>*,
-.WelcomeCard>*>*+.mountain-container {
+.WelcomeCardGoku>*>*>*>*,
+.WelcomeCardGoku>*>*+.mountain-container {
     transition: filter 0.3s;
 }
 
-.WelcomeCard:hover>*>*>*>*,
-.WelcomeCard:hover>*>*+.mountain-container {
+.WelcomeCardGoku:hover>*>*>*>*,
+.WelcomeCardGoku:hover>*>*+.mountain-container {
     filter: blur(4px);
     transition: filter 0.3s;
     animation-play-state: paused;
 }
 
-.WelcomeCard:hover {
-    filter:hue-rotate(10deg);
+.WelcomeCardGoku:hover {
+    filter: hue-rotate(10deg);
     transition: filter 0.5s;
 }
 
@@ -72,7 +72,7 @@
     }
 }
 
-.closeWelcomeCardButton {
+.closeWelcomeCardGokuButton {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -84,7 +84,7 @@
     transform: scaleX(1.2);
 }
 
-.closeWelcomeCardButton:hover {
+.closeWelcomeCardGokuButton:hover {
     color: purple;
     transition: color 0.3s;
 }
@@ -99,7 +99,7 @@
     left: 0rem;
     width: 60%;
     height: 100%;
-    z-index: 2;
+    z-index: 4;
     background-blend-mode: color-burn;
 }
 
@@ -116,23 +116,23 @@
     width: 100%;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 0.5s;
-    
+
 }
 
 @keyframes loadWelcomeMsg {
     from {
         transform: translate(40rem, 0rem);
     }
-    
+
     50% {
         opacity: 0;
     }
-    
+
     to {
         transform: translate(0rem, 0rem);
         opacity: 1;
     }
-    
+
 }
 
 
@@ -197,8 +197,8 @@
     right: 1rem;
     -webkit-transform: scaleX(-1);
     transform: translate(0px, 1000px) scaleX(-1);
-    z-index: 0;
-    background-image: url('../../assets/images/mountain.png');
+    z-index: 1;
+    background-image: url('../../../assets/images/mountain.png');
     width: 90%;
     height: 100%;
     background-repeat: no-repeat;
@@ -206,6 +206,81 @@
     transition: filter 0.3s;
     animation: mountainLoadup 3s forwards 1;
     background-position: left bottom;
+}
+
+.goku-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.goku {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    margin-left: -10rem;
+    transform: scaleX(-1);
+    animation: move_forward_goku 50s infinite forwards linear, move_up_down_goku 2s infinite alternate linear;
+    animation-delay: 2s;
+}
+
+@keyframes move_forward_goku {
+    0% {
+        margin-left: -10rem;
+        z-index: 0;
+        transform: scaleX(-1);
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    40% {
+        width: 3rem;
+        height: 3rem;
+    }
+    50% {
+        z-index: 0;
+        margin-left: 110%;
+        transform: scaleX(-1);
+        width: 4rem;
+        height: 4rem;
+    }
+
+    51% {
+        z-index: 1;
+        transform: scaleX(1);
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+    99% {
+        transform: scaleX(1);
+        z-index: 1;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    100% {
+        transform: scaleX(0);
+        margin-left: -10rem;
+        z-index: 0;
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@keyframes move_up_down_goku {
+    from {
+        margin-top: -0.3rem;
+    }
+
+    to {
+        margin-top: 0.3rem;
+    }
 }
 
 @keyframes mountainLoadup {
@@ -219,7 +294,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .WelcomeCard {
+    .WelcomeCardGoku {
         height: 20rem;
     }
 
@@ -252,7 +327,7 @@
 
 
 @media screen and (max-width: 600px) {
-    .WelcomeCard {
+    .WelcomeCardGoku {
         height: 25rem;
     }
 

@@ -1,6 +1,8 @@
 import './SideBar.css'
 import Logo from '../../assets/images/logo.png';
 import { Outlet, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+// import Lockscreen from '../lockscreen/Lockscreen.js';
 
 function SideBar() {
 
@@ -62,7 +64,7 @@ function SideBar() {
   }
 
   function change_page_active(link) {
-    
+
     let remove_sidebar_link_list = Array.from(document.querySelectorAll('.list-group-item'));
     for (let element of remove_sidebar_link_list) {
       element.classList.remove('active');
@@ -123,6 +125,13 @@ function SideBar() {
             <li className='list-group-item'>
               <i className="fa fa-shopping-bag"></i>
               User Order
+            </li>
+          </Link>
+          <li className='list-group-title'>components</li>
+          <Link onClick={() => change_page_active('lock-screen-link')} className='sidebar-link lock-screen-link' to="/lockscreen">
+            <li className='list-group-item'>
+              <i className="fa fa-users"></i>
+              Lockscreen
             </li>
           </Link>
         </ul>

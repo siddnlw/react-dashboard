@@ -1,0 +1,213 @@
+.Lockscreen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    z-index: 1000;
+    margin-top: -100vh;
+    transition: margin-top 1s;
+    overflow: hidden;
+}
+
+.Lockscreen.lockscreen-active {
+    margin-top: 0;
+    transition: margin-top 1s;
+}
+.Lockscreen.lockscreen-deactive {
+    margin-top: -100vh;
+    transition: margin-top 1s;
+}
+
+
+.lockscreen-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url('../../assets/images/lockscreen_bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lockscreen-time {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+    flex-direction: column;
+    transition: margin-top 1s, opacity 1s;
+
+}
+
+.lockscreen-time-day {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.lockscreen-msg {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: rgb(228, 228, 228, 0.7);
+}
+
+.lockscreen-login {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: backdrop-filter 1s, background 1s;
+
+}
+
+.lockscreen-image {
+    background: rgb(255, 255, 255, 0.2);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.lockscreen-login .lockscreen-login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    margin-top: 20rem;
+    transition: margin-top 1s, opacity 1s;
+}
+
+.lockscreen-login .lockscreen-login-form.active_lockscreen {
+    opacity: 1;
+    margin-top: 0rem;
+    transition: margin-top 1s, opacity 1s;
+}
+
+
+.lockscreen-login .lockscreen-login-form>* {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    color: white;
+}
+
+.lockscreen-name {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lockscreen-login .lockscreen-login-form input {
+    width: 15rem;
+    height: 1.5rem;
+    background: rgb(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+::placeholder{
+    color: rgb(255, 255, 255, 0.3);
+}
+
+.lockscreen-login-form-incorrect {
+    animation: shake 0.3s 2 linear;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        margin-left: 0px;
+    }
+
+    25% {
+        margin-left: -20px;
+    }
+    
+    50% {
+        margin-left: 0px;
+    }
+
+    75% {
+        margin-left: 20px;
+    }
+}
+
+
+.lockscreen-login.active_lockscreen {
+    background: rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+    transition: backdrop-filter 1s, background 1s;
+}
+
+.lockscreen-time.active_lockscreen {
+    opacity: 0;
+    margin-top: -20rem;
+    transition: margin-top 1s, opacity 1s;
+
+}
+
+.lockscreen-toolip {
+    position: fixed;
+    z-index: 1000;
+    cursor: pointer;
+    bottom: 1rem;
+    right: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: -10rem;
+    opacity: 0;
+    transition: opacity 1s, margin-bottom 1s;
+}
+
+.lockscreen-toolip>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.lockscreen-toolip>*:hover {
+    background: rgb(255, 255, 255, 0.1);
+}
+
+.lockscreen-toolip.active_lockscreen {
+    margin-bottom: 0rem;
+    opacity: 1;
+    transition: opacity 1s, margin-bottom 1s;
+
+}

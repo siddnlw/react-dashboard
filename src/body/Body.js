@@ -1,10 +1,10 @@
 import './body.css';
-import Dashboard from '../../pages/dashboard/Dashboard';
-import ViewCustomer from '../../pages/view-customer/ViewCustomer';
+import Dashboard from '../pages/dashboard/Dashboard';
+import ViewCustomer from '../pages/view-customer/ViewCustomer';
 import { Routes, Route } from "react-router-dom";
-import Error404 from '../404/Error404.js';
-import Footer from '../footer/Footer.js';
-import Breadcrumbs from '../breadcrumbs/Breadcrumbs';
+import Error404 from '../pages/404/Error404';
+import Footer from '../components/footer/Footer.js';
+import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs';
 
 function Body() {
   return (
@@ -12,7 +12,7 @@ function Body() {
       <Breadcrumbs />
       <div className="content">
         <Routes>
-          <Route index element={<Dashboard />} />
+          <Route index path='/' element={<Dashboard />} />
           <Route path="view-customers" element={<ViewCustomer />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

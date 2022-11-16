@@ -1,5 +1,6 @@
 import './graph-card.css';
 import SmallTable from '../Tables/small-table/SmallTable';
+import RecentOrderTable from '../Tables/table/Table';
 import { PieChart, BarAndLineChart, MultiGraph } from '../charts/Charts';
 import { Component } from 'react';
 import Chart from "react-apexcharts";
@@ -32,6 +33,8 @@ function toggle_grapgh_card_active(name, closeAll) {
       }
       graphCards.forEach(graphCard => {
         graphCard.classList.remove('graph-card-active');
+        graphCard.style.position = "relative";
+
       });
       graphCardContents.forEach(graphCardContent => {
         graphCardContent.classList.remove('graph-card-content-active');
@@ -49,11 +52,14 @@ function toggle_grapgh_card_active(name, closeAll) {
       var graphCardContent = document.getElementById('graph-card-content-' + name);
       var graphCardTitle = document.getElementById('graph-card-title-' + name);
       var element = document.getElementById('closeGraphCard' + name);
-      element.style.display = "block";
+      element.style.display = "flex";
       graphCard.classList.add('graph-card-active');
       graphCardContent.classList.add('graph-card-content-active');
       graphCardTitle.classList.add('graph-card-title-active');
       document.getElementById('graph-card-content-' + name).title = '';
+      setTimeout(() => {
+        graphCard.style.position = "unset";
+      }, 300);
     }, skipTime);
   }
 }
@@ -78,13 +84,6 @@ function GraphCardComponent(props) {
   // });
   return (
     <div id={'graph-card-' + props.name} className="graph-card box-component ">
-      <div id={"closeGraphCard" + props.name} className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }}>
-        <div>Click here to close</div>
-      </div>
-      <div id={'graph-card-title-' + props.name} className="graph-card-title">
-        <i className={'fa fas ' + props.icon}></i>
-        {props.name}
-      </div>
       <div title='Click to expand' onClick={() => { toggle_grapgh_card_active(props.name, false) }} id={'graph-card-content-' + props.name} className={"graph-card-content  " + (props.bg_color_class)}>
         <div className="graph-card-value">
           {props.value}
@@ -126,19 +125,24 @@ function GraphCardComponent(props) {
         <div className="circle1"></div>
         <div className="circle2"></div>
       </div>
+      <div id={'graph-card-title-' + props.name} className="graph-card-title">
+        <i className={'fa fas ' + props.icon}></i>
+        {props.name}
+      </div>
+      <div id={"closeGraphCard" + props.name} className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }}>
+        <div>Click here to close</div>
+      </div>
     </div>
   );
 }
 
 class FullGraphCard extends Component {
+
   constructor(props) {
     super(props);
     this.profits = {
       options:
       {
-        chart: {
-          type: "area"
-        },
         dataLabels: {
           enabled: false
         },
@@ -146,22 +150,32 @@ class FullGraphCard extends Component {
           curve: 'smooth',
         },
         xaxis: {
-          categories: (this.props.graph_catagories),
-          label: {
-            style: {
-              color: "#fff",
-              background: '#775DD0'
-            }
-          }
+          categories: (this.props.graph_catagories)
         },
-        colors: (this.props.graph_color)
+        colors: (this.props.graph_color),
+        legend: {
+          onItemClick: {
+            toggleDataSeries: true
+          },
+        },
+        annotations: {
+          yaxis: [
+            {
+              y: this.props.avarage,
+              borderColor: '#00E396',
+              label: {
+                borderColor: '#00E396',
+                style: {
+                  color: '#fff',
+                  background: '#00E396'
+                },
+                text: 'Avarage: ' + this.props.avarage
+              }
+            },
+          ]
+        },
       },
-      series: [
-        {
-          name: this.props.graph_name,
-          data: this.props.graph_value
-        }
-      ]
+      series: (this.props.graph_value)
     };
   }
   render() {
@@ -171,7 +185,7 @@ class FullGraphCard extends Component {
         <Chart
           options={this.profits.options}
           series={this.profits.series}
-          type={this.props.graph_type}
+          // type={this.props.graph_type}
           width={'82%'}
           height={"100%"} />
       </div>
@@ -189,5 +203,16 @@ class SmallTableCard extends Component {
   }
 }
 
-export { GraphCardComponent, FullGraphCard, SmallTableCard };
+class RecentOrderCard extends Component {
+  render() {
+    return (
+      <div className='RecentOrdersCard box-component'>
+        <div>Recent Orders</div>
+        <RecentOrderTable />
+      </div>
+    )
+  }
+}
+
+export { GraphCardComponent, FullGraphCard, SmallTableCard, RecentOrderCard };
 

@@ -8,8 +8,14 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Outlet, Link } from "react-router-dom";
+import Lockscreen from '../lockscreen/Lockscreen.js';
 
 function Header() {
+  function active_lockscreen() {
+    var lockscreen = document.getElementById('Lockscreen');
+    lockscreen.classList.remove('lockscreen-deactive');
+    lockscreen.classList.add('lockscreen-active');
+  }
   function change_page_active(link) {
 
     let remove_sidebar_link_list = Array.from(document.querySelectorAll('.list-group-item'));
@@ -23,6 +29,9 @@ function Header() {
   }
   return (
     <div className="Header">
+      <div id='lockscreen_container'>
+        <Lockscreen />
+      </div>
       <div>
         <SideBar />
       </div>
@@ -38,6 +47,12 @@ function Header() {
                   profile
                 </li>
               </Link>
+              <div onClick={active_lockscreen}>
+                <li>
+                  <i className="fa fa-desktop" aria-hidden="true"></i>
+                  lockscreen
+                </li>
+              </div>
               <Link onClick={() => change_page_active('settings-link')} className='sidebar-link settings-link' to="/settings">
                 <li>
                   <SettingsIcon />
