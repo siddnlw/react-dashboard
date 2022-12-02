@@ -198,7 +198,7 @@
     -webkit-transform: scaleX(-1);
     transform: translate(0px, 1000px) scaleX(-1);
     z-index: 0;
-    background-image: url('../../assets/images/mountain.png');
+    background-image: url('../../../assets/images/mountain.png');
     width: 90%;
     height: 100%;
     background-repeat: no-repeat;

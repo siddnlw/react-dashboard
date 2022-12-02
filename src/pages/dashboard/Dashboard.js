@@ -1,15 +1,13 @@
 import './dashboard.css';
 import {GraphCard, RevenueAndUserCard, RecentOrdersTable} from '../../components/graph-cards/GraphCard';
-import WelcomeCardGoku from '../../components/welcome-card/Extra/WelcomeCardGoku';
-// import WelcomeCard from '../../components/welcome-card/WelcomeCard';
+import WelcomeCard from '../../components/welcome-card/congratulations/WelcomeCard';
 import Calender from '../../components/calender/Calender';
 import DocumentTitle from 'react-document-title';
 function Dashboard() {
   return (
     <DocumentTitle title='Dashboard'>
       <div className="Dashboard">
-        {/* <WelcomeCard/> */}
-        <WelcomeCardGoku/>
+        <WelcomeCard/>
         <GraphCard />
         <RevenueAndUserCard />
         <RecentOrdersTable />

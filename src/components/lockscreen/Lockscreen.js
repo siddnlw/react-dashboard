@@ -19,7 +19,9 @@ export default function Lockscreen() {
     }
     setInterval(setTime, 999);
 
+    
     function lockscreen_active() {
+        document.body.style.position = "fixed";
         var lockscreen = document.getElementById('Lockscreen-Login');
         lockscreen.classList.add('active_lockscreen');
 
@@ -33,6 +35,7 @@ export default function Lockscreen() {
         lockscreen.classList.add('active_lockscreen');
 
         document.getElementById('lockscreen-password').focus();
+
     }
 
     function lockscreen_deactive() {
@@ -44,10 +47,10 @@ export default function Lockscreen() {
 
         var lockscreen = document.getElementById('lockscreen-login-form');
         lockscreen.classList.remove('active_lockscreen');
-        
+
         var lockscreen = document.getElementById('lockscreen-toolip');
         lockscreen.classList.remove('active_lockscreen');
-        
+
         var lockscreen = document.getElementById('lockscreen-form');
         lockscreen.reset();
 
@@ -63,11 +66,13 @@ export default function Lockscreen() {
             var lockscreen = document.getElementById('Lockscreen');
             lockscreen.classList.remove('lockscreen-active');
             lockscreen.classList.add('lockscreen-deactive');
+            document.body.style.position = "relative";
+
         }
-        else{
+        else {
             var lockscreen = document.getElementById('lockscreen-password');
             lockscreen.classList.add('lockscreen-login-form-incorrect');
-            setInterval(()=>{
+            setInterval(() => {
                 lockscreen.classList.remove('lockscreen-login-form-incorrect')
             }, time)
         }

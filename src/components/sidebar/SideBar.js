@@ -128,10 +128,10 @@ function SideBar() {
             </li>
           </Link>
           <li className='list-group-title'>components</li>
-          <Link onClick={() => change_page_active('lock-screen-link')} className='sidebar-link lock-screen-link' to="/lockscreen">
+          <Link onClick={() => change_page_active('greeting-cards-link')} className='sidebar-link greeting-cards-link' to="/greeting-cards">
             <li className='list-group-item'>
               <i className="fa fa-users"></i>
-              Lockscreen
+              Greeting Cards
             </li>
           </Link>
         </ul>

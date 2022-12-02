@@ -1,5 +1,5 @@
 import './welcome-card.css';
-import Cloud from '../../assets/elements/Clouds/Clouds';
+import Cloud from '../../../assets/elements/Clouds/Clouds';
 // import Tilt from 'react-parallax-tilt';
 
 function WelcomeCard() {
@@ -33,7 +33,6 @@ function WelcomeCard() {
                         <div className="mountain"></div>
                     </div>
                 </div>
-                <div className="welcome-character"></div>
             </div >
         // </Tilt>
     );
