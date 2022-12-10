@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.cdnfonts.com/css/accidental-presidency');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 .WelcomeCardHappyBirthday {
     position: relative;
@@ -63,11 +64,6 @@
     animation-play-state: paused !important;
 }
 
-.WelcomeCardHappyBirthday:hover {
-    filter: hue-rotate(10deg);
-    transition: filter 0.5s;
-}
-
 .suprise-opener {
     position: relative;
     top: 0rem;
@@ -75,7 +71,7 @@
     width: 100%;
     height: 100%;
     z-index: 501;
-    background: linear-gradient(45deg, #dfded8, #eae9e4, #f4f3ed, #eae9e4, #dfded8);
+    background: linear-gradient(45deg, #ffc5f6, #ffe0fc, #ffebfd, #ffe0fc, #ffc5f6);
     animation: open-surprise-box 2s forwards;
     animation-delay: 5.5s;
 }
@@ -85,7 +81,6 @@
         opacity: 1;
         display: block;
         z-index: 501;
-
     }
 
     99% {
@@ -240,6 +235,7 @@
     box-shadow: inset 10px 10px 20px rgb(154, 0, 0, 0.2), inset 20px 20px 10px #fa3b3a, inset 20px 10px 30px white;
     animation: ribbon-knot-bow 1.5s linear forwards;
 }
+
 .ribbon-knot-left.open-surprise {
     animation: ribbon-knot-bow-move-left 1.5s ease-in-out infinite alternate-reverse;
     animation-play-state: running !important;
@@ -294,10 +290,12 @@
     animation: ribbon-knot-extended-right 5s forwards, ribbon-knot-extended-right-after 1s forwards;
     animation-delay: 0s, 4.5s;
 }
+
 .ribbon-knot-right-extended.open-surprise {
     animation: ribbon-knot-extended-move-right 1.5s ease-in-out alternate-reverse infinite;
     animation-play-state: running !important;
 }
+
 .ribbon-knot-left-extended.open-surprise {
     animation: ribbon-knot-extended-move-left 1.5s ease-in-out alternate-reverse infinite;
     animation-play-state: running !important;
@@ -323,6 +321,7 @@
         transform: rotateZ(5deg);
         transform-origin: right;
     }
+
     100% {
         transform: rotateZ(-5deg);
         transform-origin: right;
@@ -335,6 +334,7 @@
         transform: rotateZ(-5deg);
         transform-origin: left;
     }
+
     100% {
         transform: rotateZ(5deg);
         transform-origin: left;
@@ -361,6 +361,7 @@
         margin-top: 0rem;
         border-radius: 0px 50px 0px 0px;
     }
+
     100% {
         height: 4rem;
         width: 2rem;
@@ -391,6 +392,7 @@
         margin-top: 0rem;
         border-radius: 50px 0px 0px 0px;
     }
+
     100% {
         height: 4rem;
         width: 2rem;
@@ -407,6 +409,7 @@
         transform: rotateZ(-6deg);
         transform-origin: top;
     }
+
     100% {
         transform: rotateZ(-16deg);
         transform-origin: top;
@@ -419,6 +422,7 @@
         transform: rotateZ(6deg);
         transform-origin: top;
     }
+
     100% {
         transform: rotateZ(16deg);
         transform-origin: top;
@@ -454,8 +458,6 @@
     }
 }
 
-
-
 .WelcomeCardHappyBirthday .closeWelcomeCardButton {
     position: absolute;
     top: 1rem;
@@ -484,12 +486,10 @@
     width: 60%;
     height: 100%;
     z-index: 2;
-    
-    /* background-blend-mode: color-burn; */
 }
 
 .WelcomeCardHappyBirthday .greet-msg {
-    text-shadow: 10px 5px 5px rgb(228, 148, 144, 0.5);
+    text-shadow: 10px 5px 7px rgb(228, 148, 144, 0.5);
     position: absolute;
     top: 2rem;
     left: 3rem;
@@ -503,7 +503,7 @@
     width: 100%;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 6s;
-
+    font-family: sans-serif;
 }
 
 @keyframes loadWelcomeMsg {
@@ -527,7 +527,7 @@
     position: absolute;
     top: 4.2rem;
     left: 3rem;
-    text-shadow: 10px 5px 5px rgb(228, 148, 144, 0.5);
+    text-shadow: 10px 5px 5px rgb(228, 148, 144, 0.5), -1px -1px 1px rgb(255, 255, 255);
     width: 80%;
     color: #5a514b;
     font-family: 'Allura', cursive;
@@ -538,18 +538,29 @@
     animation-delay: 6.5s;
 }
 
+.party-hat {
+    position: absolute;
+    top: -1.1rem;
+    left: 10rem;
+    width: 3rem;
+    height: 3rem;
+    transform: rotateZ(20deg);
+    z-index: -1;
+    opacity: 0.3;
+}
+
 .WelcomeCardHappyBirthday .info-msg-secondry {
     position: absolute;
-    top: 7.3rem;
+    top: 7.8rem;
     left: 3rem;
     width: 80%;
     letter-spacing: -0.05rem;
     font-family: 'Accidental Presidency', sans-serif;
-    font-size: 37px;
+    font-size: 20px;
     font-weight: bold;
     border: none;
-    color: #f4e4cf;
-    text-shadow: 0px 0px 10px rgb(228, 148, 144);
+    color: rgb(244, 228, 207, 0.8);
+    text-shadow: 0px 0px 10px rgb(255, 179, 175), 1px 1px 1px rgb(255, 119, 112), -1px -1px 1px rgb(255, 255, 255);
     opacity: 0;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 7s;
@@ -562,9 +573,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 25px;
 }
 
-.party_flag_1{
+.party_flag_1 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -572,7 +584,8 @@
     left: 0;
     overflow: hidden;
 }
-.party_flag_1 img{
+
+.party_flag_1 img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -582,11 +595,14 @@
     height: 5rem;
     transform: rotateZ(-45deg);
     z-index: 200;
-    /* filter: blur(2px); */
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+    animation: party_flag_loadup 5s ease-out forwards;
+    animation-delay: 8s;
 }
 
 
-.party_flag_2{
+.party_flag_2 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -594,7 +610,8 @@
     left: 0;
     overflow: hidden;
 }
-.party_flag_2 img{
+
+.party_flag_2 img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -602,26 +619,202 @@
     left: 4rem;
     width: 15rem;
     height: 5rem;
-    /* transform: rotateZ(-5deg); */
+    opacity: 0.6;
     filter: blur(2px);
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+    animation: party_flag_loadup 4s ease-out forwards;
+    animation-delay: 7s;
+}
+
+@keyframes party_flag_loadup {
+    0% {
+        margin-top: -10rem;
+    }
+
+    100% {
+        margin-top: 0rem;
+    }
+}
+
+.ballon_1 img {
+    position: absolute;
+    bottom: -6rem;
+    left: -3rem;
+    width: 10rem;
+    height: 13rem;
+}
+
+.ballon_2 img {
+    position: absolute;
+    bottom: -6rem;
+    right: -3rem;
+    width: 10rem;
+    height: 13rem;
+}
+
+.cake img {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.bday-pic-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bday-pic-tape {
+    position: absolute;
+    bottom: 11rem;
+    right: 7rem;
+    width: 5rem;
+    height: 2rem;
+    background: rgb(253, 255, 237, 0.8);
+    clip-path: polygon(100% 0, 51% 0, 0 1%, 10% 9%, 0 10%, 10% 15%, 0 20%, 11% 25%, 0 30%, 14% 33%, 0 40%, 10% 45%, 0 50%, 11% 55%, 0 60%, 15% 66%, 0 70%, 26% 76%, 0 80%, 26% 86%, 100% 78%, 84% 71%, 100% 65%, 79% 60%, 100% 53%, 88% 50%, 100% 42%, 83% 39%, 100% 32%, 89% 28%, 100% 21%, 84% 18%, 100% 11%, 83% 7%);
+    transform: rotateZ(10deg) scale(5, 5);
+    transform-origin: top;
+    transform-style: preserve-3d;
+    filter: blur(10px);
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    animation: photo-move 2s ease-in-out infinite alternate-reverse, tape-loadup 0.5s forwards;
+    animation-delay: 7.5s;
+    z-index: 10;
 }
 
 
-.WelcomeCardHappyBirthday .gifts-container {
+@keyframes tape-loadup {
+    from {
+        transform: rotateZ(10deg) scale(5, 5);
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateZ(10deg) scale(1, 1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.bday-pic-bg {
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
+    right: 4.5rem;
+    width: 10rem;
+    height: 11rem;
+    background: whitesmoke;
+    z-index: 8;
+    opacity: 0;
+    box-shadow: 10px 10px rgb(90, 81, 75, 0.3);
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transform: perspective(15cm) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+    margin-bottom: 30rem;
+    animation: photo-move 2s ease-in-out infinite alternate-reverse, pic-loadup 1s forwards;
+    animation-delay: 7s;
+    --box-shadow-color: rgb(90, 81, 75, 0.2);
+}
+
+@keyframes pic-loadup {
+    from {
+        margin-bottom: 30rem;
+        opacity: 0;
+    }
+
+    to {
+        margin-bottom: 0rem;
+        opacity: 1;
+    }
+}
+
+.bday-pic {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 9rem;
+    height: 9rem;
+    background: #ececec;
+    box-shadow: inset 0px 0px 10px rgb(128, 128, 128);
+    overflow: hidden;
+}
+
+.bday-pic img {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 100%;
+    height: 100%;
+}
+
+.bday-name {
+    position: absolute;
+    bottom: 0.1rem;
+    display: flex;
+    justify-content: center;
+    width: 9rem;
+    font-family: 'Schoolbell', cursive;
+    text-transform: capitalize;
+}
+
+@keyframes photo-move {
+    from {
+        transform: perspective(15cm) rotateX(0deg) rotateY(0deg) rotateZ(10deg);
+        box-shadow: 6px 6px 1px var(--box-shadow-color);
+
+    }
+
+    to {
+        transform: perspective(15cm) rotateX(10deg) rotateY(0deg) rotateZ(10deg);
+        box-shadow: 3px 3px 10px var(--box-shadow-color);
+    }
+
+}
+
+.WelcomeCardHappyBirthday .gift-msgs-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.WelcomeCardHappyBirthday .gift {
+.msg {
+    font-size: 1rem;
+    width: 40%;
+    font-family: 'Schoolbell', cursive;
+    color: crimson;
+    z-index: 1;
+}
+
+.GiftBoxImg {
     position: absolute;
     bottom: 0rem;
-    right: 1rem;
-    width: 90%;
+    left: 0rem;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    opacity: 0.2;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 25px;
+}
+
+.GiftBoxImg img {
+    margin-bottom: -0.1rem;
+    width: 10rem;
+    height: 5rem;
+    z-index: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -642,22 +835,47 @@
     }
 
     .WelcomeCardHappyBirthday .greet-msg {
-        /* top: 5rem; */
         position: static;
-        font-size: 124%;
+        font-size: 194%;
+        top: 0rem;
+        left: 3rem;
     }
 
     .WelcomeCardHappyBirthday .info-msg {
         position: static;
         margin-top: -2rem;
     }
-    .WelcomeCardHappyBirthday .info-msg-secondry{
+
+    .WelcomeCardHappyBirthday .info-msg-secondry {
         position: static;
         margin-top: -4rem;
     }
 
     .WelcomeCardHappyBirthday .gift {
         width: 85%;
+    }
+
+    .bday-pic-tape {
+        right: 0;
+        top: 2.5rem;
+        bottom: 20rem;
+    }
+    
+    .bday-pic-bg {
+        top: 3rem;
+        right: -1.5rem;
+    }
+
+    .WelcomeCardHappyBirthday .gift-msgs-container {
+        justify-content: flex-end;
+        padding: 1rem;
+        box-sizing: border-box;
+        bottom: 0 !important;
+    }
+    .msg {
+        width: 90%;
+        height: 25%;
+        font-size: 0.8rem;
     }
 }
 
@@ -680,16 +898,34 @@
     }
 
     .WelcomeCardHappyBirthday .greet-msg {
-        /* top: 5rem; */
         position: static;
-        font-size: 124%;
+        font-size: 200%;
+        margin-top: -8rem !important;
     }
 
     .WelcomeCardHappyBirthday .info-msg {
         position: static;
+        margin-top: -7rem !important;
+    }
+
+    .WelcomeCardHappyBirthday .info-msg-secondry {
+        position: static;
+        margin-top: -7rem !important;
     }
 
     .WelcomeCardHappyBirthday .gift {
         width: 85%;
+    }
+    .WelcomeCardHappyBirthday .gift-msgs-container {
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 1rem;
+        box-sizing: border-box;
+        bottom: 0 !important;
+    }
+    .msg {
+        width: 90%;
+        height: 30%;
+        font-size: 0.8rem;
     }
 }

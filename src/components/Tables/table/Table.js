@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './table.css';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
