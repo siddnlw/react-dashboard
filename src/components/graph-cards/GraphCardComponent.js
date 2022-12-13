@@ -83,7 +83,17 @@ function GraphCardComponent(props) {
 
   // });
   return (
-    <div id={'graph-card-' + props.name} className="graph-card box-component ">
+    <>
+      <div id={'graph-card-' + props.name} className="graph-card box-component ">
+
+        <div id={'graph-card-title-' + props.name} className="graph-card-title">
+          <i className={'fa fas ' + props.icon}></i>
+          {props.name}
+        </div>
+        <div id={"closeGraphCard" + props.name} className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }}>
+          <div>Click here to close</div>
+        </div>
+      </div>
       <div title='Click to expand' onClick={() => { toggle_grapgh_card_active(props.name, false) }} id={'graph-card-content-' + props.name} className={"graph-card-content  " + (props.bg_color_class)}>
         <div className="graph-card-value">
           {props.value}
@@ -125,14 +135,8 @@ function GraphCardComponent(props) {
         <div className="circle1"></div>
         <div className="circle2"></div>
       </div>
-      <div id={'graph-card-title-' + props.name} className="graph-card-title">
-        <i className={'fa fas ' + props.icon}></i>
-        {props.name}
-      </div>
-      <div id={"closeGraphCard" + props.name} className="closeGraphCard" onClick={() => { toggle_grapgh_card_active(props.name, true) }}>
-        <div>Click here to close</div>
-      </div>
-    </div>
+    </>
+
   );
 }
 
