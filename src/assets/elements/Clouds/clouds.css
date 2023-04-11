@@ -1,226 +1,212 @@
 #background-wrap {
-	bottom: 0;
-	left: 0;
-	padding-top: 50px;
-	position: absolute;
-	right: 0;
-	top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
+
 
 /* KEYFRAMES */
 
 @-webkit-keyframes animateCloud {
-	0% {
-		margin-top: -1rem;
-	}
-
-	100% {
-		margin-top: 1rem;
-	}
+    0% {
+        margin-top: -1rem;
+    }
+    100% {
+        margin-top: 1rem;
+    }
 }
 
 @-moz-keyframes animateCloud {
-	0% {
-		margin-top: -1rem;
-	}
-
-	100% {
-		margin-top: 1rem;
-	}
+    0% {
+        margin-top: -1rem;
+    }
+    100% {
+        margin-top: 1rem;
+    }
 }
 
 @keyframes animateCloud {
-	0% {
-		margin-top: -1rem;
-		margin-bottom: -1rem;
-	}
-	
-	100% {
-		margin-bottom: 1rem;
-		margin-top: 1rem;
-	}
+    0% {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+    100% {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
 }
 
 @keyframes animateCloudLoadup {
-	0% {
-		margin-top: -100rem;
-		margin-bottom: -100rem;
-		opacity: 0;
-	}
-	
-	50% {
-		margin-bottom: 2rem;
-		margin-top: 3rem;
-	}
-	
-	100% {
-		opacity: 1;
-		margin-bottom: -1rem;
-		margin-top: -1rem;
-	}
+    0% {
+        margin-top: -100rem;
+        margin-bottom: -100rem;
+        opacity: 0;
+    }
+    50% {
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: -1rem;
+        margin-top: -1rem;
+    }
 }
+
 
 /* ANIMATIONS */
 
 .x1 {
-	position: absolute;
-	top: 0;
-	left: -5rem !important;
-	z-index: 3;
-	-webkit-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
-	-moz-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
-	animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
-	animation-delay: 3.1s, 0.1s;
-	-webkit-transform: scale(0.65);
-	-moz-transform: scale(0.65);
-	transform: scale(0.65);
-	transition: filter 0.3s;
-
+    position: absolute;
+    top: 0;
+    left: -5rem !important;
+    z-index: 3;
+    -webkit-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
+    -moz-animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
+    animation: animateCloud 3s ease-in-out alternate infinite, animateCloudLoadup 3s;
+    animation-delay: 3.1s, 0.1s;
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    transform: scale(0.65);
+    transition: filter 0.3s;
 }
 
 .x2 {
-	position: absolute;
-	top: 6rem;
-	left: -3rem !important;
-	z-index: 1;
-	-webkit-animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
-	-moz-animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
-	animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
-	animation-delay: 4.1s, 0.1s;
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-	transition: filter 0.4s;
-
+    position: absolute;
+    top: 6rem;
+    left: -3rem !important;
+    z-index: 1;
+    -webkit-animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
+    -moz-animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
+    animation: animateCloud 4s ease-in-out alternate infinite, animateCloudLoadup 4s;
+    animation-delay: 4.1s, 0.1s;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
+    transition: filter 0.4s;
 }
 
 .x3 {
-	position: absolute;
-	top: 3rem;
-	left: 7rem !important;
-	z-index: 1;
-	animation-delay: 1s;
-	-webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	-moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	animation-delay: 2.1s, 0.1s;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	transform: scale(0.5);
-	transition: filter 0.2s;
+    position: absolute;
+    top: 3rem;
+    left: 7rem !important;
+    z-index: 1;
+    animation-delay: 1s;
+    -webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    -moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    animation-delay: 2.1s, 0.1s;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+    transition: filter 0.2s;
 }
 
 .x4 {
-	position: absolute;
-	bottom: 8rem;
-	right: -1rem !important;
-	z-index: 1;
-	-webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	-moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
-	animation-delay: 2.1s, 0.1s;
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
+    position: absolute;
+    bottom: 8rem;
+    right: -1rem !important;
+    z-index: 1;
+    -webkit-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    -moz-animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    animation: animateCloud 2s ease-in-out alternate infinite, animateCloudLoadup 2s;
+    animation-delay: 2.1s, 0.1s;
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
 }
 
 .x5 {
-	position: absolute;
-	bottom: 6rem;
-	right: 16rem !important;
-	-webkit-animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
-	-moz-animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
-	animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
-	animation-delay: 3.6s, 0.1s;
-	z-index: 2;
-	-webkit-transform: scale(0.55);
-	-moz-transform: scale(0.55);
-	transform: scale(0.55);
+    position: absolute;
+    bottom: 6rem;
+    right: 16rem !important;
+    -webkit-animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
+    -moz-animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
+    animation: animateCloud 3.5s ease-in-out alternate infinite, animateCloudLoadup 3.5s;
+    animation-delay: 3.6s, 0.1s;
+    z-index: 2;
+    -webkit-transform: scale(0.55);
+    -moz-transform: scale(0.55);
+    transform: scale(0.55);
 }
+
 
 /* OBJECTS */
 
 .cloud {
-	background: #fff;
-	background: -moz-linear-gradient(top, #fff 5%, #f1f1f1 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fff), color-stop(100%, #f1f1f1));
-	background: -webkit-linear-gradient(top, #fff 5%, #f1f1f1 100%);
-	background: -o-linear-gradient(top, #fff 5%, #f1f1f1 100%);
-	background: -ms-linear-gradient(top, #fff 5%, #f1f1f1 100%);
-	background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f1f1f1', GradientType=0);
-
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
-
-	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-
-	height: 4rem;
-	position: relative;
-	width: 15rem;
+    background: #fff;
+    background: -moz-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fff), color-stop(100%, #f1f1f1));
+    background: -webkit-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -o-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: -ms-linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f1f1f1', GradientType=0);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 4rem;
+    position: relative;
+    width: 15rem;
 }
 
 .cloud:after,
 .cloud:before {
-	background: #fff;
-	content: '';
-	position: absolute;
-	z-indeX: -1;
+    background: #fff;
+    content: '';
+    position: absolute;
+    z-indeX: -1;
 }
 
 .cloud:before {
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
-
-	height: 5rem;
-	width: 5rem;
-	left: 3rem;
-	top: -50px;
-	/* box-shadow: inset 5px 10px 10px rgb(128, 128, 128, 0.2); */
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    height: 5rem;
+    width: 5rem;
+    left: 3rem;
+    top: -50px;
+    /* box-shadow: inset 5px 10px 10px rgb(128, 128, 128, 0.2); */
 }
 
 .cloud:after {
-	-webkit-border-radius: 5rem;
-	-moz-border-radius: 5rem;
-	border-radius: 5rem;
-	/* background-color: red; */
-	width: 7rem;
-	height: 7rem;
-	right: 2rem;
-	top: -4rem;
-	/* box-shadow: inset 10px 1px 10px rgb(128, 128, 128, 0.1); */
-	/* z-index: 2; */
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+    width: 7rem;
+    height: 7rem;
+    right: 2rem;
+    top: -4rem;
+    /* box-shadow: inset 10px 1px 10px rgb(128, 128, 128, 0.1); */
+    /* z-index: 2; */
 }
 
-
 @media screen and (max-width: 800px) {
-	.x3 {
-		top: 2rem;
-		left: unset !important;
-		right: -3rem !important;
-	}
-
-	.x2 {
-		top: 6rem;
-		left: unset !important;
-		right: 9rem !important;
-		-webkit-transform: scale(0.4);
-		-moz-transform: scale(0.4);
-		transform: scale(0.4);
-
-	}
-
-	.x4 {
-		bottom: 3rem;
-		right: -3rem !important;
-	}
-
-	.x5 {
-		bottom: 1rem;
-		right: 7rem !important;
-	}
+    .x3 {
+        top: 2rem;
+        left: unset !important;
+        right: -3rem !important;
+    }
+    .x2 {
+        top: 6rem;
+        left: unset !important;
+        right: 9rem !important;
+        -webkit-transform: scale(0.4);
+        -moz-transform: scale(0.4);
+        transform: scale(0.4);
+    }
+    .x4 {
+        bottom: 3rem;
+        right: -3rem !important;
+    }
+    .x5 {
+        bottom: 1rem;
+        right: 7rem !important;
+    }
 }

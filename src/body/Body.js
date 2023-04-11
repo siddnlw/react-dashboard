@@ -1,6 +1,5 @@
 import './body.css';
 import { Routes, Route } from "react-router-dom";
-import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs';
 import Dashboard from '../pages/dashboard/Dashboard';
 import GreetingCards from '../pages/greeting-cards/GreetingCards';
 import ViewCustomer from '../pages/view-customer/ViewCustomer';
@@ -10,7 +9,6 @@ import Footer from '../components/footer/Footer.js';
 function Body() {
   return (
     <div className="Body">
-      <Breadcrumbs />
       <div className="content">
         <Routes>
           <Route index path='/' element={<Dashboard />} />

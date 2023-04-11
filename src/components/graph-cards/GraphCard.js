@@ -1,5 +1,5 @@
 import './graph-card.css';
-import { GraphCardComponent, FullGraphCard, SmallTableCard, RecentOrderCard } from './GraphCardComponent';
+import { GraphCardComponent, FullGraphCard, SmallTableCard, RecentOrderCard, SmallTableProgressCard } from './GraphCardComponent';
 
 function GraphCard() {
   var graph_value = [
@@ -29,7 +29,7 @@ function GraphCard() {
   )
 }
 
-function RevenueAndUserCard() {
+function RevenueAndProductvityCard() {
   var current_data = new Array(12).fill(0).map(() => parseInt(Math.random() * 400));
   var previous_data = new Array(12).fill(0).map(() => parseInt(Math.random() * 400));
   const sum1 = current_data.reduce((partialSum, a) => partialSum + a, 0)/12;
@@ -48,20 +48,31 @@ function RevenueAndUserCard() {
     }
   ];
   return (
-    <div className="RevenueAndUserCard" >
+    <div className="RevenueAndProductvityCard" >
       <FullGraphCard name={'Total Revenue'} graph_value={graph_value} avarage={avg} graph_color={['#BF74FF', '#669DF6']} graph_catagories={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']} />
-      <SmallTableCard />
+      <SmallTableProgressCard />
     </div>
   )
 }
 
 function RecentOrdersTable() {
   return (
-    <div className="RecentOrdersTable box-component" >
+    <div className="RecentOrdersTable" >
       < RecentOrderCard/>
     </div>
   )
 }
 
-export { GraphCard, RevenueAndUserCard, RecentOrdersTable};
+
+function UserDetail() {
+  return (
+    <div className="UserDetail" >
+      < SmallTableCard/>
+      < SmallTableCard/>
+      < SmallTableCard/>
+    </div>
+  )
+}
+
+export { GraphCard, RevenueAndProductvityCard, RecentOrdersTable, UserDetail};
 

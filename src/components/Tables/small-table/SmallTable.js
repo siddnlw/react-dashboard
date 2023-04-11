@@ -1,14 +1,17 @@
 import './smalltable.css';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
 import { DataGrid } from '@mui/x-data-grid';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+// import { styled } from '@mui/material/styles';
+// import Box from '@mui/material/Box';
+// import { createTheme } from "@mui/material/styles";
 
 const columns = [
     { field: 'id', headerName: 'ID', width: '20%' },
     {
         field: 'fullName',
         headerName: 'Full name',
-        description: 'This column has a value getter and is not sortable.',
         sortable: true,
         width: '40%',
         valueGetter: (params) =>
@@ -28,8 +31,8 @@ const rows = [
     { id: '#212', lastName: 'Frances', firstName: 'Rossini', role: 'Graphical Designer'},
     { id: '#64', lastName: 'Roxie', firstName: 'Harvey', role: 'Web Devloper'},
 ];
-
 function SmallTable() {
+
     return (
         <div style={{ height: 400, width: '100%' }}>
             <DataGrid
@@ -41,5 +44,39 @@ function SmallTable() {
         </div>
     );
 }
+export default function renderProgress(params) {
+    return <LinearProgress variant="determinate" value={10} />;
+    // <LinearProgress variant="determinate" value={10} />
+}
+function SmallProgressTable() {
+    // const normalise = (value) => ((value - MIN) * 100) / (MAX - MIN);
+    const columns = [
+        { field: 'ProductName', headerName: 'ProductName' },
+        { field: 'Productivity', headerName: 'Percentage', renderCell: renderProgress,type: "number",},
+    ];
+    const rows = [
+        { id: '#121', ProductName: 'Snow', Productivity: Math.random()},
+        { id: '#321', ProductName: 'Lannister', Productivity: Math.random()},
+        { id: '#643', ProductName: 'Lannister', Productivity: Math.random()},
+        { id: '#1523', ProductName: 'Stark', Productivity: Math.random()},
+        { id: '#640', ProductName: 'Targaryen', Productivity: Math.random()},
+        { id: '#867', ProductName: 'Melisandre',Productivity: Math.random()},
+        { id: '#534', ProductName: 'Clifford', Productivity: Math.random()},
+        { id: '#212', ProductName: 'Frances', Productivity: Math.random()},
+        { id: '#64', ProductName: 'Roxie', Productivity: Math.random()},
+    ];
+    
+    return (
+        <div style={{ height: 400, width: '100%' }}>
+            <LinearProgress variant="determinate" value={10} />
+            <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
+            />
+        </div>
+    );
+}
 
-export default SmallTable;
+export {SmallTable, SmallProgressTable};

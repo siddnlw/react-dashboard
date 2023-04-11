@@ -1,5 +1,5 @@
 import './graph-card.css';
-import SmallTable from '../Tables/small-table/SmallTable';
+import {SmallTable, SmallProgressTable} from '../Tables/small-table/SmallTable';
 import RecentOrderTable from '../Tables/table/Table';
 import { PieChart, BarAndLineChart, MultiGraph } from '../charts/Charts';
 import { Component } from 'react';
@@ -185,7 +185,7 @@ class FullGraphCard extends Component {
   render() {
     return (
       <div className='FullGraphCard box-component'>
-        {this.props.name}
+       <div className="card-title">{this.props.name} </div> 
         <Chart
           options={this.profits.options}
           series={this.profits.series}
@@ -207,16 +207,27 @@ class SmallTableCard extends Component {
   }
 }
 
+class SmallTableProgressCard extends Component {
+  render() {
+    return (
+      <div className='SmallTableProgressCard box-component'>
+        <SmallProgressTable />
+      </div>
+    )
+  }
+}
+
+
 class RecentOrderCard extends Component {
   render() {
     return (
       <div className='RecentOrdersCard box-component'>
-        <div>Recent Orders</div>
+        <div className='card-title'>Recent Orders</div>
         <RecentOrderTable />
       </div>
     )
   }
 }
 
-export { GraphCardComponent, FullGraphCard, SmallTableCard, RecentOrderCard };
+export { GraphCardComponent, FullGraphCard, SmallTableCard, RecentOrderCard, SmallTableProgressCard };
 

@@ -1,3 +1,39 @@
-.css-1e2bxag-MuiDataGrid-root{
+.css-1e2bxag-MuiDataGrid-root {
     border: none !important;
+}
+
+.MuiDataGrid-virtualScrollerRenderZone {
+    width: 100% !important;
+}
+
+.MuiDataGrid-row {
+    width: 100% !important;
+}
+
+.MuiDataGrid-row>*:nth-child(1) {
+    width: 20% !important;
+}
+
+.MuiDataGrid-row>*:nth-child(2) {
+    width: 40% !important;
+}
+
+.MuiDataGrid-row>*:nth-child(3) {
+    width: 40% !important;
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow {
+    width: 100%;
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow>*:nth-child(1) {
+    width: 20% !important;
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow>*:nth-child(2) {
+    width: 40% !important;
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow>*:nth-child(3) {
+    width: 40% !important;
 }

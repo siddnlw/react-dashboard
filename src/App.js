@@ -6,15 +6,16 @@ import Body from './body/Body.js';
 import Login from './pages/login/desgin1/Login.js';
 import Lockscreen from './components/lockscreen/Lockscreen.js';
 
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         {window.location.pathname !== "/login" ? (
-          <div>
+          <>
             <Header />
             <Body />
-          </div>
+          </>
         ) : null}
         <Routes>
           <Route path="login" element={<Login />} />
