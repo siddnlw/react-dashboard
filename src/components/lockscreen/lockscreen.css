@@ -7,19 +7,22 @@
     background: rgb(0, 0, 0);
     z-index: 1000;
     margin-top: -100vh;
-    transition: margin-top 1s;
+    opacity: 0;
+    transition: margin-top 1s, opacity 1s;
     overflow: hidden;
 }
 
 .Lockscreen.lockscreen-active {
     margin-top: 0;
-    transition: margin-top 1s;
-}
-.Lockscreen.lockscreen-deactive {
-    margin-top: -100vh;
-    transition: margin-top 1s;
+    opacity: 1;
+    transition: margin-top 1s, opacity 1s;
 }
 
+.Lockscreen.lockscreen-deactive {
+    margin-top: -100vh;
+    opacity: 0;
+    transition: margin-top 1s, opacity 1s;
+}
 
 .lockscreen-bg {
     position: absolute;
@@ -30,6 +33,7 @@
     background: url('../../assets/images/lockscreen_bg1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    filter: brightness(0.3);
 }
 
 .lockscreen-time {
@@ -46,7 +50,6 @@
     font-size: 4rem;
     flex-direction: column;
     transition: margin-top 1s, opacity 1s;
-
 }
 
 .lockscreen-time-day {
@@ -73,7 +76,6 @@
     align-items: center;
     flex-direction: column;
     transition: backdrop-filter 1s, background 1s;
-
 }
 
 .lockscreen-image {
@@ -98,7 +100,6 @@
     margin-top: 0rem;
     transition: margin-top 1s, opacity 1s;
 }
-
 
 .lockscreen-login .lockscreen-login-form>* {
     display: flex;
@@ -132,7 +133,7 @@
     box-sizing: border-box;
 }
 
-::placeholder{
+::placeholder {
     color: rgb(255, 255, 255, 0.3);
 }
 
@@ -141,25 +142,20 @@
 }
 
 @keyframes shake {
-
     0%,
     100% {
         margin-left: 0px;
     }
-
     25% {
         margin-left: -20px;
     }
-    
     50% {
         margin-left: 0px;
     }
-
     75% {
         margin-left: 20px;
     }
 }
-
 
 .lockscreen-login.active_lockscreen {
     background: rgb(0, 0, 0, 0.3);
@@ -171,7 +167,6 @@
     opacity: 0;
     margin-top: -20rem;
     transition: margin-top 1s, opacity 1s;
-
 }
 
 .lockscreen-toolip {
@@ -209,5 +204,4 @@
     margin-bottom: 0rem;
     opacity: 1;
     transition: opacity 1s, margin-bottom 1s;
-
 }

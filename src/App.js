@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './assets/css/style.css';
+
 import Header from './components/header/Header.js';
 import Body from './body/Body.js';
 import Login from './pages/login/desgin1/Login.js';

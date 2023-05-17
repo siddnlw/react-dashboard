@@ -23,18 +23,19 @@
     min-width: 17rem;
     height: 10rem;
     line-break: strict;
-    background: white;
+    background: var(--secondry-background);
     position: relative;
     z-index: 1;
     transition: margin-bottom 0.5s 1s;
     cursor: pointer;
+    transition: background 0.5s;
 }
 
 .graph-card-title {
     position: sticky;
     top: 1rem;
     left: 1rem;
-    z-index: 11;
+    z-index: 12;
     color: white;
     transition: color 0.3s 0.3s;
     text-transform: capitalize;
@@ -263,12 +264,14 @@
     left: 2rem;
 }
 
-.graph-card-value-subvalue.increment {
-    color: #5ccf1f;
+.graph-card-value-subvalue.increment,
+.fa-arrow-up {
+    color: #5ccf1f !important;
     font-weight: bolder;
 }
 
-.graph-card-value-subvalue.decrement {
+.graph-card-value-subvalue.decrement,
+.fa-arrow-down {
     color: #FF3D1D;
     font-weight: bolder;
 }
@@ -373,7 +376,7 @@
 }
 
 .FullGraphCard {
-    background: white;
+    background: var(--secondry-background);
     grid-column: 1/span 2;
     display: flex;
     flex-direction: column;
@@ -390,11 +393,11 @@
     /* grid-column: 3; */
     flex-grow: 1;
     width: 33%;
-    background: white;
+    background: var(--secondry-background);
 }
 
 .SmallTableProgressCard {
-    background: white;
+    background: var(--secondry-background);
     width: 100%;
 }
 
@@ -413,7 +416,7 @@
     min-height: 10rem;
     width: 100%;
     min-height: 10rem;
-    background-color: white;
+    background-color: var(--secondry-background);
     display: flex;
     flex-direction: column;
     gap: 1rem;

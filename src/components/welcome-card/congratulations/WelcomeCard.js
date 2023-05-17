@@ -15,6 +15,10 @@ function WelcomeCard() {
         // >
             <div id='WelcomeCard' className="WelcomeCard box-component">
                 <div className="closeWelcomeCardButton" onClick={close_welcome_card}>x</div>
+                <div className="moon-sun">
+                    <i class="fa fa-moon moon-icon"></i>
+                    <i class="fa-sharp fa fa-sun sun-icon"></i>
+                </div>
                 <div className="welcome-msg">
                     <div className="greet-msg">
                         Congratulations John! 🎉
@@ -30,7 +34,9 @@ function WelcomeCard() {
                         <Cloud />
                     </div>
                     <div className="mountain-container">
-                        <div className="mountain"></div>
+                        <div className="mountain">
+
+                        </div>
                     </div>
                 </div>
             </div >

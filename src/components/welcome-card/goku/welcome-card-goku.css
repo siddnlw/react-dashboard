@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 .WelcomeCardGoku {
     position: relative;
     background: linear-gradient(to bottom, rgb(248, 216, 255), rgb(220, 140, 223));
@@ -50,7 +49,6 @@
         width: 100%;
         height: 13rem;
     }
-
     10% {
         width: 50%;
         margin-left: 25%;
@@ -58,7 +56,6 @@
         opacity: 1;
         display: none;
     }
-
     100% {
         display: none;
         margin-top: 0rem;
@@ -68,7 +65,6 @@
         overflow: hidden;
         filter: blur(1000px);
         opacity: 0;
-
     }
 }
 
@@ -89,8 +85,7 @@
     transition: color 0.3s;
 }
 
-
-.welcome-msg {
+.welcome-msg-goku {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -103,7 +98,7 @@
     background-blend-mode: color-burn;
 }
 
-.greet-msg {
+.greet-msg-goku {
     position: absolute;
     top: 2rem;
     left: 3rem;
@@ -116,27 +111,22 @@
     width: 100%;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 0.5s;
-
 }
 
 @keyframes loadWelcomeMsg {
     from {
         transform: translate(40rem, 0rem);
     }
-
     50% {
         opacity: 0;
     }
-
     to {
         transform: translate(0rem, 0rem);
         opacity: 1;
     }
-
 }
 
-
-.info-msg {
+.info-msg-goku {
     position: absolute;
     bottom: 2rem;
     left: 3rem;
@@ -150,7 +140,7 @@
     animation-delay: 1s;
 }
 
-.view-profile-button {
+.view-profile-button-goku {
     height: 2rem;
     width: 6rem;
     border: 2px solid blueviolet;
@@ -161,13 +151,12 @@
     margin-top: 0.7rem;
 }
 
-.view-profile-button:hover {
+.view-profile-button-goku:hover {
     background-color: blueviolet;
     color: white;
     box-shadow: 0px 0px 0px 10px rgb(138, 43, 226, 0.1);
     transition: color 0.3s, background 0.3s, box-shadow 0.3s;
 }
-
 
 .welcome-background {
     position: absolute;
@@ -236,7 +225,6 @@
         width: 3rem;
         height: 3rem;
     }
-    
     40% {
         width: 3rem;
         height: 3rem;
@@ -248,22 +236,18 @@
         width: 4rem;
         height: 4rem;
     }
-
     51% {
         z-index: 1;
         transform: scaleX(1);
         width: 5rem;
         height: 5rem;
-
     }
-
     99% {
         transform: scaleX(1);
         z-index: 1;
         width: 5rem;
         height: 5rem;
     }
-
     100% {
         transform: scaleX(0);
         margin-left: -10rem;
@@ -277,7 +261,6 @@
     from {
         margin-top: -0.3rem;
     }
-
     to {
         margin-top: 0.3rem;
     }
@@ -287,7 +270,6 @@
     from {
         transform: translate(0px, 1000px) scaleX(-1);
     }
-
     to {
         transform: translate(0px, 0px) scaleX(-1);
     }
@@ -297,7 +279,6 @@
     .WelcomeCardGoku {
         height: 20rem;
     }
-
     .welcome-msg {
         width: 100%;
         display: flex;
@@ -309,28 +290,23 @@
         padding-right: 1rem;
         box-sizing: border-box;
     }
-
     .greet-msg {
         /* top: 5rem; */
         position: static;
         font-size: 124%;
     }
-
     .info-msg {
         position: static;
     }
-
     .mountain {
         width: 85%;
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .WelcomeCardGoku {
         height: 25rem;
     }
-
     .welcome-msg {
         width: 100%;
         display: flex;
@@ -342,17 +318,14 @@
         padding-right: 1rem;
         box-sizing: border-box;
     }
-
     .greet-msg {
         /* top: 5rem; */
         position: static;
         font-size: 124%;
     }
-
     .info-msg {
         position: static;
     }
-
     .mountain {
         width: 85%;
     }

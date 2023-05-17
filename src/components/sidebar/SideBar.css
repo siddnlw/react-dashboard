@@ -2,7 +2,7 @@
       text-decoration: none;
       color: black;
   }
-
+  
   .SideBar {
       position: fixed;
       left: 0rem;
@@ -10,11 +10,12 @@
       height: 100vh;
       width: 17rem;
       margin-left: -17rem;
-      background: white;
+      background: var(--primary-background);
       z-index: 101;
       box-sizing: border-box;
+      transition: background 0.5s;
   }
-
+  
   .sidebar-sidearea {
       position: absolute;
       top: 4rem;
@@ -24,12 +25,12 @@
       background: rgb(0, 0, 0, 0.2);
       transition: background 0.3s;
   }
-
+  
   .sidebar-sidearea.display-toggle {
       display: none;
   }
-
-    .logo {
+  
+  .logo {
       height: 50px;
       width: 100px;
       padding-right: 4rem;
@@ -38,7 +39,7 @@
       object-fit: cover;
       object-position: 50% 50%;
   }
-
+  
   .sidebar-menu-container {
       margin-top: 1rem;
       width: 100%;
@@ -47,7 +48,7 @@
       overflow-x: hidden;
       box-sizing: border-box;
   }
-
+  
   .sidebar-button {
       position: absolute;
       top: 1rem;
@@ -58,23 +59,22 @@
       font-size: 2rem;
       cursor: pointer;
       letter-spacing: 2px;
+      color: var(--link-color);
       transition: color 0.3s, text-shadow 0.3s;
       /* z-index: 102; */
-
   }
-
+  
   .sidebar-button:hover {
-      color: #bf74ff;
+      color: var(--link-hover-color);
   }
-
+  
   ul {
       width: 100%;
       padding: 0;
       padding-left: 1rem;
       box-sizing: border-box;
-
   }
-
+  
   li {
       list-style-type: none;
       width: calc(100% - 1rem);
@@ -84,7 +84,7 @@
       cursor: pointer;
       transition: color 0.5s, background 0.3s;
   }
-
+  
   .list-group-title {
       gap: 10px;
       letter-spacing: 3px;
@@ -92,25 +92,36 @@
       text-transform: uppercase;
       font-size: 0.7rem;
   }
-
+  
   .list-group-item {
       border-radius: 0.3rem;
       padding-left: 0.5rem;
+      color: var(--link-color);
       text-transform: capitalize;
+      transition: color 0.3s;
   }
-
+  
   .list-group-item i {
       padding-right: 1rem;
   }
-
+  
   .list-group-item.active {
-      background: linear-gradient(to right, #e1c4ff, #cc96fc);
+      color: var(--sidebar-active-color);
+      background: var( --link-active-background);
+      transition: color 0.3s, background 0.3s;
   }
-
+  
+  .list-group-item.active i {
+      color: var(--sidebar-active-color);
+  }
+  
   .list-group-item:not(.active):hover {
-      color: #bf74ff;
-      background: linear-gradient(to left, #efdfff, #f2e7ff);
-
+      color: var( --link-hover-color);
+      background: var(--link-hover-background);
   }
-
+  
+  .list-group-item:not(.active):hover i {
+      color: var( --link-hover-color);
+  }
+  
   @media screen and (max-width:1000px) {}

@@ -27,6 +27,37 @@ function Header() {
     var sidebar_link_child = sidebar_link.querySelector('.list-group-item');
     sidebar_link_child.classList.add('active');
   }
+
+  $( window ).on('load',function() {
+    const modeBtn = document.getElementById('mode');
+    modeBtn.onchange = (e) => {
+      if (modeBtn.checked === true) 
+      {
+        document.documentElement.classList.remove("light")
+        document.documentElement.classList.add("dark")
+        window.localStorage.setItem('mode', 'dark');
+      } 
+      else 
+      {
+        document.documentElement.classList.remove("dark")
+        document.documentElement.classList.add("light")
+        window.localStorage.setItem('mode', 'light');
+      }
+    }
+        
+      const mode = window.localStorage.getItem('mode');
+      if (mode == 'dark') {
+        modeBtn.checked = true;
+        document.documentElement.classList.remove("light")
+        document.documentElement.classList.add("dark")
+      }
+      
+      if (mode == 'light') {
+        modeBtn.checked = false;
+        document.documentElement.classList.remove("dark")
+        document.documentElement.classList.add("light")
+      }
+  });
   return (
     <div className="Header">
       <div id='lockscreen_container'>
@@ -34,6 +65,13 @@ function Header() {
       </div>
       <div>
         <SideBar />
+      </div>
+      <div className="form-switch text-center my-5">
+      <label class="switch">
+        <input type="checkbox" id="mode" className="form-check-input"/>
+        <span class="slider round"></span>
+      </label>
+        <label for="mode" className="form-check-label"></label>
       </div>
       <Stack direction="row" spacing={2}>
         <Avatar alt="Siddharth Nalwaya" src="/static/images/avatar/1.jpg" />

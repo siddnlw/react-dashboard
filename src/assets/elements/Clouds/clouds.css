@@ -188,10 +188,13 @@
 }
 
 @media screen and (max-width: 800px) {
+    .x1 {
+        left: 0 !important;
+    }
     .x3 {
-        top: 2rem;
+        top: 9rem;
         left: unset !important;
-        right: -3rem !important;
+        right: -5rem !important;
     }
     .x2 {
         top: 6rem;
@@ -202,8 +205,8 @@
         transform: scale(0.4);
     }
     .x4 {
-        bottom: 3rem;
-        right: -3rem !important;
+        bottom: 0.5rem;
+        right: -2rem !important;
     }
     .x5 {
         bottom: 1rem;

@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 .WelcomeCard {
     position: relative;
-    background: linear-gradient(to bottom, rgb(248, 216, 255), rgb(220, 140, 223));
+    background: linear-gradient(to bottom, rgb(248, 216, 255), rgb(220, 140, 223), #7479ff, rgb(5, 45, 103));
+    background-size: 250% 400%;
+    background-position: var(--background-position-cards);
     width: 100%;
     height: 13rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: block;
     padding: 0;
-    transition: filter 1.3s;
+    transition: filter 1.3s, background-position 0.5s ease;
 }
 
 .WelcomeCard.disapear {
@@ -38,7 +39,7 @@
 }
 
 .WelcomeCard:hover {
-    filter:hue-rotate(10deg);
+    filter: hue-rotate(10deg);
     transition: filter 0.5s;
 }
 
@@ -50,7 +51,6 @@
         width: 100%;
         height: 13rem;
     }
-
     10% {
         width: 50%;
         margin-left: 25%;
@@ -58,7 +58,6 @@
         opacity: 1;
         display: none;
     }
-
     100% {
         display: none;
         margin-top: 0rem;
@@ -68,7 +67,6 @@
         overflow: hidden;
         filter: blur(1000px);
         opacity: 0;
-
     }
 }
 
@@ -77,18 +75,17 @@
     top: 1rem;
     right: 1.5rem;
     font-size: 1.3rem;
-    color: blueviolet;
+    color: var(--primary-color-welcome-card);
     cursor: pointer;
     z-index: 100;
     transition: color 0.3s;
-    transform: scaleX(1.2);
+    transform: scaleX(1.2), color 0.3s;
 }
 
 .closeWelcomeCardButton:hover {
-    color: purple;
+    color: var(--primary-color-hover-welcome-card);
     transition: color 0.3s;
 }
-
 
 .welcome-msg {
     position: absolute;
@@ -99,7 +96,7 @@
     left: 0rem;
     width: 60%;
     height: 100%;
-    z-index: 2;
+    z-index: 30;
     background-blend-mode: color-burn;
 }
 
@@ -107,7 +104,7 @@
     position: absolute;
     top: 2rem;
     left: 3rem;
-    color: blueviolet;
+    color: var(--primary-color-welcome-card);
     font-family: 'Pacifico', cursive;
     letter-spacing: 0.5rem;
     font-size: 150%;
@@ -116,58 +113,56 @@
     width: 100%;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 0.5s;
-    
+    transition: color 0.3s;
+    ;
 }
 
 @keyframes loadWelcomeMsg {
     from {
         transform: translate(40rem, 0rem);
     }
-    
     50% {
         opacity: 0;
     }
-    
     to {
         transform: translate(0rem, 0rem);
         opacity: 1;
     }
-    
 }
-
 
 .info-msg {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 3rem;
     letter-spacing: 0.2rem;
     width: 80%;
-    color: rgb(255, 98, 98);
-    font-size: 130%;
+    color: var(--secondry-color-welcome-card);
+    font-size: 120%;
     transform: translate(40rem, 0rem);
     opacity: 0;
     animation: loadWelcomeMsg 2s forwards 1 ease-out;
     animation-delay: 1s;
+    /* margin-top: 10rem !important; */
 }
 
 .view-profile-button {
     height: 2rem;
     width: 6rem;
-    border: 2px solid blueviolet;
-    color: blueviolet;
+    border: 2px solid;
+    border-color: var(--primary-color-welcome-card);
+    color: var(--primary-color-welcome-card);
     border-radius: 4px;
-    background: rgb(232, 178, 235, 0.5);
+    background: var(--button-bg-welcome-card);
     transition: color 0.3s, background 0.3s, box-shadow 0.3s;
     margin-top: 0.7rem;
+    transition: border-color 0.3s, color 0.3s;
 }
 
 .view-profile-button:hover {
-    background-color: blueviolet;
+    background: var(--primary-color-welcome-card);
     color: white;
-    box-shadow: 0px 0px 0px 10px rgb(138, 43, 226, 0.1);
-    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 0px 0px 10px var(--box-shadow-button);
 }
-
 
 .welcome-background {
     position: absolute;
@@ -206,13 +201,43 @@
     transition: filter 0.3s;
     animation: mountainLoadup 3s forwards 1;
     background-position: left bottom;
+    filter: var(--bg-image-filter);
+}
+
+.moon-sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.moon-icon,
+.sun-icon {
+    font-size: 50px;
+    position: absolute;
+    transition: top 0.5s ease, right 0.5s ease;
+}
+
+.sun-icon {
+    top: var(--sun-pos-top);
+    right: var(--sun-pos-right);
+    color: rgb(255, 206, 114);
+    filter: drop-shadow(0 0 10px rgb(255, 209, 123));
+}
+
+.moon-icon {
+    top: var(--moon-pos-top);
+    right: var(--moon-pos-right);
+    color: rgb(255, 242, 216);
+    filter: drop-shadow(0 0 10px white);
 }
 
 @keyframes mountainLoadup {
     from {
         transform: translate(0px, 1000px) scaleX(-1);
     }
-
     to {
         transform: translate(0px, 0px) scaleX(-1);
     }
@@ -222,7 +247,6 @@
     .WelcomeCard {
         height: 20rem;
     }
-
     .welcome-msg {
         width: 100%;
         display: flex;
@@ -234,28 +258,23 @@
         padding-right: 1rem;
         box-sizing: border-box;
     }
-
     .greet-msg {
         /* top: 5rem; */
         position: static;
         font-size: 124%;
     }
-
     .info-msg {
         position: static;
     }
-
     .mountain {
         width: 85%;
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .WelcomeCard {
         height: 25rem;
     }
-
     .welcome-msg {
         width: 100%;
         display: flex;
@@ -267,17 +286,14 @@
         padding-right: 1rem;
         box-sizing: border-box;
     }
-
     .greet-msg {
         /* top: 5rem; */
         position: static;
         font-size: 124%;
     }
-
     .info-msg {
         position: static;
     }
-
     .mountain {
         width: 85%;
     }

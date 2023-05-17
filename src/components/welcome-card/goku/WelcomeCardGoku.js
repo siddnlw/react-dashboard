@@ -16,14 +16,14 @@ function WelcomeCardGoku() {
         // >
             <div id='WelcomeCardGoku' className="WelcomeCardGoku box-component">
                 <div className="closeWelcomeCardGokuButton" onClick={close_welcome_card}>x</div>
-                <div className="welcome-msg">
-                    <div className="greet-msg">
+                <div className="welcome-msg-goku">
+                    <div className="greet-msg-goku">
                         Congratulations John! 🎉
                     </div>
-                    <div className="info-msg">
+                    <div className="info-msg-goku">
                         You have done 72% more sales today. Check your new badge in your profile.
                         <br />
-                        <button className='view-profile-button'>View Profile</button>
+                        <button className='view-profile-button-goku'>View Profile</button>
                     </div>
                 </div>
                 <div className="welcome-background">

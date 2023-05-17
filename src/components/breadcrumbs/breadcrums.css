@@ -21,7 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: var(--primary-background);
+    color: var(--link-color);
+    transition: color 0.3s, background 0.5s;
 }
 
 .breadcrums-path>* {
@@ -38,22 +40,26 @@
 }
 
 .path:hover {
-    color: purple;
+    color: var(--link-hover-color);
+    ;
     cursor: pointer;
 }
 
 .child-path:hover:before {
-    color: black;
+    color: var(--link-color);
+    ;
 }
 
 .breadcrums-logo i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #e1c4ff, #cc96fc);
+    background: var(--link-active-background);
+    color: var(--link-color);
     height: 2rem;
     width: 2rem;
     border-radius: 5px;
+    transition: color 0.3s, background 0.5s;
 }
 
 .current-time {
@@ -61,12 +67,14 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1rem;
-    background: white;
+    background: var(--primary-background);
+    color: var(--link-color);
+    transition: color 0.3s, background 0.5s;
 }
 
 .current-time:hover {
     cursor: pointer;
-    color: purple;
+    color: var(--link-hover-color);
 }
 
 @media screen and (max-width:1200px) {

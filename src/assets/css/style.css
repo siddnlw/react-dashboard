@@ -1,37 +1,134 @@
-body{
-    background: #f2edf3;
+body {
+    background: var(--body-background);
     max-width: 100vw;
     overflow-x: hidden;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background 0.5s;
 }
 
+:root,
+ :root.light {
+    /* background color */
+    --body-background: #f2edf3;
+    --table-background: #ffffff;
+    --secondry-background: #fff;
+    --primary-background: #fff;
+    --link-active-background: linear-gradient(to right, #e1c4ff, #cc96fc);
+    --link-hover-background: linear-gradient(to left, #efdfff, #f2e7ff);
+    /* text color */
+    --sidebar-active-color: black;
+    --link-hover-color: #bf74ff;
+    --link-color: #000;
+    /* welcome card */
+    --background-position-cards: 0% 0%;
+    --primary-color-welcome-card: purple;
+    --primary-color-hover-welcome-card: blueviolet;
+    --secondry-color-welcome-card: rgb(255, 98, 98);
+    --button-bg-welcome-card: rgb(232, 178, 235, 0.5);
+    --box-shadow-button: rgb(138, 43, 226, 0.1);
+    --bg-image-filter: brightness(1);
+    --sun-pos-top: 2rem;
+    --sun-pos-right: 2rem;
+    --moon-pos-top: -9rem;
+    --moon-pos-right: -19rem;
+}
+
+ :root.dark {
+    /* background color */
+    --body-background: #181924;
+    --table-background: #272933;
+    --secondry-background: #24252F;
+    --primary-background: #24252F;
+    --link-active-background: linear-gradient(to right, #8eccff, #569cff);
+    --link-hover-background: linear-gradient(to right, #c6e6ff, #a5cbff);
+    /* text color */
+    --sidebar-active-color: rgb(5, 45, 103);
+    --link-hover-color: #7479ff;
+    --link-color: #fafafa;
+    /* welcome card */
+    --background-position-cards: 0% 100%;
+    --primary-color-welcome-card: rgb(5, 45, 103);
+    --primary-color-hover-welcome-card: #b3b5ff;
+    --secondry-color-welcome-card: #ff9a6e;
+    --button-bg-welcome-card: rgba(178, 192, 235, 0.5);
+    --box-shadow-button: rgba(43, 134, 226, 0.1);
+    --bg-image-filter: brightness(0.8) grayscale(0.4);
+    --sun-pos-top: 40rem;
+    --sun-pos-right: 40rem;
+    --moon-pos-top: 2rem;
+    --moon-pos-right: 2rem;
+}
+
+tr {
+    background: var(--table-background) !important;
+}
+
+th,
+td {
+    color: var(--link-color) !important;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.card-title {
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400 !important;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+
+
+/* Firefox */
+
+* {
     scrollbar-width: thin;
     scrollbar-color: rgba(163, 163, 163, 0.5) #ffffff;
-  }
+    color: var(--link-color);
+    transition: color 0.3s, background 0.5s, fill 0.3s;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
     width: 5px;
     display: none;
-  }
-  
-  *::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-track {
     background: #ffffff;
     display: none;
-  }
-  
-  *::-webkit-scrollbar-thumb {
+}
+
+*::-webkit-scrollbar-thumb {
     background-color: rgba(163, 163, 163, 0.5);
     border-radius: 10px;
     border: 3px solid transparent;
     display: none;
-  }
+}
 
-  .box-component{
+.box-component {
     padding: 1rem;
     border-radius: 20px;
     box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);
     box-sizing: border-box;
-  }
+    /* box-shadow: 5px -5px 10px rgb(67 89 113 / 12%), -5px 5px 10px rgb(255, 255, 255), inset -5px 5px 5px white, inset 5px -5px 5px rgb(34, 34, 34, 0.1); */
+    /* background: rgb(255, 255, 255, 0.2) !important; */
+    /* backdrop-filter: blur(5px); */
+    /* border: 4px solid rgb(255, 255, 255, 0.2); */
+}
+
+.apexcharts-text,
+.apexcharts-legend-text {
+    fill: var(--link-color) !important;
+    color: var(--link-color) !important;
+}
