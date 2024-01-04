@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-dashboard/static/css/main.4e96cf8c.css",
-    "main.js": "/react-dashboard/static/js/main.f5ba6c09.js",
+    "main.js": "/react-dashboard/static/js/main.4052d3df.js",
     "static/js/787.f04d8c20.chunk.js": "/react-dashboard/static/js/787.f04d8c20.chunk.js",
     "static/media/balloons.png": "/react-dashboard/static/media/balloons.33e9f00f51f0abbcb7cd.png",
     "static/media/party_flag.png": "/react-dashboard/static/media/party_flag.9083462550ec8eea4f82.png",
@@ -14,11 +14,11 @@
     "static/media/logo.png": "/react-dashboard/static/media/logo.b56100b316453ec0835d.png",
     "index.html": "/react-dashboard/index.html",
     "main.4e96cf8c.css.map": "/react-dashboard/static/css/main.4e96cf8c.css.map",
-    "main.f5ba6c09.js.map": "/react-dashboard/static/js/main.f5ba6c09.js.map",
+    "main.4052d3df.js.map": "/react-dashboard/static/js/main.4052d3df.js.map",
     "787.f04d8c20.chunk.js.map": "/react-dashboard/static/js/787.f04d8c20.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e96cf8c.css",
-    "static/js/main.f5ba6c09.js"
+    "static/js/main.4052d3df.js"
   ]
 }
