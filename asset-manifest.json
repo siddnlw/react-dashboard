@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-dashboard/static/css/main.4e96cf8c.css",
+    "main.js": "/react-dashboard/static/js/main.f5ba6c09.js",
+    "static/js/787.f04d8c20.chunk.js": "/react-dashboard/static/js/787.f04d8c20.chunk.js",
+    "static/media/balloons.png": "/react-dashboard/static/media/balloons.33e9f00f51f0abbcb7cd.png",
+    "static/media/party_flag.png": "/react-dashboard/static/media/party_flag.9083462550ec8eea4f82.png",
+    "static/media/cake.png": "/react-dashboard/static/media/cake.c2354ccfef207d330737.png",
+    "static/media/lockscreen_bg1.png": "/react-dashboard/static/media/lockscreen_bg1.cbf3edeefad3181cc9e8.png",
+    "static/media/party_hat.png": "/react-dashboard/static/media/party_hat.5c8c4e049845e3e4ee6d.png",
+    "static/media/goku.png": "/react-dashboard/static/media/goku.020c8b13285f1c64d90a.png",
+    "static/media/gift-boxs.webp": "/react-dashboard/static/media/gift-boxs.4b6750df35b525562c8b.webp",
+    "static/media/mountain.png": "/react-dashboard/static/media/mountain.f4be8adc29d0b0d26a3b.png",
+    "static/media/logo.png": "/react-dashboard/static/media/logo.b56100b316453ec0835d.png",
+    "index.html": "/react-dashboard/index.html",
+    "main.4e96cf8c.css.map": "/react-dashboard/static/css/main.4e96cf8c.css.map",
+    "main.f5ba6c09.js.map": "/react-dashboard/static/js/main.f5ba6c09.js.map",
+    "787.f04d8c20.chunk.js.map": "/react-dashboard/static/js/787.f04d8c20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e96cf8c.css",
+    "static/js/main.f5ba6c09.js"
+  ]
+}
