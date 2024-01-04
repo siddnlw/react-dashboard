@@ -10,7 +10,7 @@ import Lockscreen from './components/lockscreen/Lockscreen.js';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/react-dashboard">
         {window.location.pathname !== "/login" ? (
           <>
             <Header />
